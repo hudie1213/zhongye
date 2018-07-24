@@ -1,0 +1,144 @@
+@media only screen and (min-width: 320px) and (max-width: 760px) {
+	.sy_bj h3,
+	.rc_bj h3,
+	.hz_bj h3 p,
+	.xw_bj h2,
+	.lx_bj h2 {
+		font-size: 16px;
+	}
+	header nav {
+		width: 100%;
+		right: 0;
+	}
+	header nav a {
+		padding: 0 1.5px;
+	}
+	.sj_con,
+	.sj_con2 {
+		display: none;
+	}
+	.yd_con p {
+		width: 100%;
+	}
+	/*nav{
+		visibility: hidden;
+	}*/
+	.rc_bj h6 {
+		line-height: 1.5;
+	}
+	.hz img {
+		width: 22%;
+		margin: auto;
+	}
+	.hz_bj h3 p {
+		width: 90px;
+	}
+	.xw_bj h2,
+	.lx_bj h2 {
+		width: 100px;
+		height: 24px;
+		line-height: 24px;
+	}
+	.xw_con {
+		width: 90%;
+	}
+	.xw_con a p {
+		font-size: 10px;
+		width: 100%;
+		height: 28px;
+		line-height: 20px;
+	}
+	.xw_con a span {
+		display: none;
+	}
+	.xwmore {
+		width: 80px;
+		height: 20px;
+		line-height: 20px;
+	}
+	.lx {
+		width: 90%;
+	}
+	.userForm textarea {
+		line-height: 20px;
+		font-size: 14px;
+	}
+	.lx_md h6,
+	.lx_md p {
+		margin-left: 5vw;
+		margin-bottom: 5px;
+	}
+	.lx_md h6:nth-child(1) {
+		background: url(../img/addr_bj.png) no-repeat left center;
+		background-size: 16px 16px;
+	}
+	.lx_md h6:nth-child(3) {
+		background: url(../img/tel_bj.png) no-repeat left center;
+		background-size: 16px 16px;
+	}
+	.lx_md h6:nth-child(5) {
+		background: url(../img/email_bj.png) no-repeat left center;
+		background-size: 16px 16px;
+	}
+	.foot ul:nth-child(3) {
+		display: none;
+	}
+	footer .foot ul {
+		width: 25%;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 960px) {
+	.xw_con ul li:nth-child(1) {
+		border-left: 3px solid #0075a9;
+		font-size: 18px;
+		margin-bottom: 2vw;
+		text-indent: 3vw;
+	}
+	.xw_con ul li:nth-child(1) a {
+		color: #0075a9;
+	}
+	.foot ul li {
+		height: 20px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.foot ul li:nth-child(1) {
+		height: 28px;
+	}
+	.foot ul li:nth-child(1) a {
+		font-size: 16px;
+		line-height: 28px;
+	}
+}
+
+@media only screen and (min-width: 100px) and (max-width: 480px) {
+	.lx {
+		width: 95%;
+	}
+	.lx_md h6,
+	.lx_md p {
+		margin-left: 0;
+	}
+	.lx_md h6 {
+		line-height: 1.2;
+		text-indent: 18px;
+	}
+	.lx_md p {
+		text-indent: 10px;
+	}
+}
+
+@media only screen and (min-width: 100px) and (max-width: 620px) {
+	.yd_con p {
+		display: none;
+	}
+	.yd_con:nth-child(1),
+	.yd_con:nth-child(2),
+	.yd_con:nth-child(3),
+	.yd_con:nth-child(4) {
+		background-size: 150% 150%;
+		background-position-y: 5%;
+	}
+}
