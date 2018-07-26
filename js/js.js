@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$("nav a").eq(n).addClass("hover");
+	$(".zinav a").eq(n).addClass("zihover");
 	$(".ban div").eq(0).css("opacity", "1");
 	$(".ban div").eq(0).siblings().css("opacity", "0");
 	$(".banList span").eq(0).addClass("spH");

@@ -789,7 +789,39 @@ nav a:hover {
 	margin: 1vw 0;
 	font-size: 1.2vw;
 }
-
+.telCode{
+	width: 100%;
+	box-sizing: border-box;
+}
+.telCode label{
+	color: #fff;
+	display: inline-block;
+	line-height:3vw;
+	font-size: 1.5vw;
+	height: 3vw;
+	box-sizing: border-box;
+}
+.telCode input{
+	width: 50%;
+	line-height: 2vw;
+	display: inline-block;
+	box-sizing: border-box;
+	border: 2px solid #d2d2d2;
+	border-radius: 0.2vw;
+	padding: 0.5vw;
+	font-size: 1.2vw;
+}
+.telCode a{
+	display: inline-block;
+	padding: 0.5vw;
+	line-height: 2.5vw;
+	font-size: 1.2vw;
+	color: #333;
+	background: #ccc;
+	border-radius: 0.5vw;
+	border: 1px solid #333;
+	box-sizing: border-box;
+}
 .email {
 	width: 100%;
 	display: block;
@@ -925,4 +957,115 @@ footer p {
 	font-size: 1.2vw;
 	line-height: 1.5;
 	border-top: 1px solid #fff;
+}
+.zihead{
+	width: 100%;
+	box-sizing: border-box;
+	background: #303030;
+	padding: 1vw 3vw;
+	
+}
+.zihead img{
+	display: inline-block;
+	width: 20vw;
+}
+.zinav{
+	width: 70%;
+	box-sizing: border-box;
+	padding-top: 2vw;
+	justify-content: flex-end;
+}
+.zinav a{
+	display: inline-block;
+	width: auto;
+	padding: 1vw;
+	box-sizing: border-box;
+	color: #fff;
+	transition: 0.2s;
+	font-size: 1.2vw;
+	line-height: 1.5;
+}
+.zinav a:hover{
+	background: #ee3808;
+}
+.zinav .zihover{
+	background: #ee3808;
+}
+.anliban{
+	width: 100%;
+	overflow: hidden;
+}
+.anliban img{
+	width: 100%;
+	display: block;
+}
+.anlicon{
+	width: 100%;
+	margin-top: 4vw;
+}
+.anlicon h1,.anlishow h2{
+	font-size: 2.5vw;
+	padding: 1vw 2vw;
+	color: #fff;
+	background: #84ccc9;
+	margin: 0 auto;
+	width: 15vw;
+	text-align: center;
+	border-radius: 1vw;
+	min-width: 80px;
+	min-height: 20px;
+}
+.anlicon p,.anlishow p{
+	text-align: center;
+	color: #999;
+	font-size: 1.3vw;
+	padding: 0.2vw 0;
+}
+.anlicon img{
+	width: 100%;
+	display: block;
+	margin: 4vw 0;
+}
+.anliList{
+	width: 100%;
+	overflow: hidden;
+	margin: 4vw 0;
+}
+.anliList_con{
+	width: 300%;
+}
+.anliLi{
+	width: 100%;
+	flex-wrap:wrap !important;
+	box-sizing: border-box;
+}
+.anliLi_con{
+	width: 15%;
+	margin: 1vw 0.83%;
+	padding: 0 0 1vw;
+	box-sizing: border-box;
+	box-shadow: 0 3px 5px #333;
+}
+.anliLi_img{
+	width: 100%;
+	overflow: hidden;
+}
+.anliLi_imgList{
+	width: 400%;
+}
+.anliLi_liimg{
+	width: 100%;
+	display: inline-block;
+}
+.anliLi_con h6{
+	width: 90%;
+	margin: 1vw 5% 0.5vw;
+	font-size: 1.5vw;
+	color: #333;
+}
+.anliLi_con p{
+	background: #d2d2d2;
+	border-radius: 10px;
+	margin: 5px 5%;
+	width: 90%;
 }
