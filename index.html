@@ -9,17 +9,17 @@
 		<meta name="Description" content="" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/media.css" />
+		<link rel="stylesheet" type="text/css" href="css/keyframes.css"/>
 		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript">
-			var n = 0;
-		</script>
 		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
-
+		<script type="text/javascript">
+			var n=0;
+		</script>
 	</head>
 
 	<body>
 		<header>
-			<video width="auto" height="100%" class="banvid">
+			<video width="auto" height="100%" class="banvid" loop="loop" autoplay="autoplay">
 				<source src="img/bj.mp4" type="video/mp4"></source>
 			</video>
 			<nav class="flexnoend">
@@ -30,26 +30,32 @@
 				<a href="">小程序制作</a>
 				<a href="">关于中也</a>
 			</nav>
+			<div class="banList flex">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 			<div class="ban">
-				<div class="ban1 a">
-					<article class="banImg1">
+				<div class="ban1 ban_con">
+					<article class="banImg1 banArt">
 						<img src="img/ban1.png">
 					</article>
-					<p>中也者，天下之大本也1<br />The great world of China is also</p>
+					<p class="banP">中也者，天下之大本也1<br />The great world of China is also</p>
 				</div>
-				<div class="ban2 a">
-					<article class="banImg1">
+				<div class="ban2 ban_con">
+					<article class="banImg1 banArt">
 						<img src="img/ban1.png">
 					</article>
-					<p>中也者，天下之大本也2<br />The great world of China is also</p>
+					<p class="banP">中也者，天下之大本也2<br />The great world of China is also</p>
 				</div>
-				<div class="ban3 a">
-					<article class="banImg1">
+				<div class="ban3 ban_con">
+					<article class="banImg1 banArt">
 						<img src="img/ban1.png">
 					</article>
-					<p>中也者，天下之大本也3<br />The great world of China is also</p>
+					<p class="banP">中也者，天下之大本也3<br />The great world of China is also</p>
 				</div>
 			</div>
+			
 			<div class="sj flex">
 				<div class="sj_con">
 					<h4>500</h4>

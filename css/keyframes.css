@@ -1,0 +1,88 @@
+@keyframes banArt {
+    0%{
+        transform: translate(0px,-8vw);
+    }
+    25%{
+        transform: translate(0px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@keyframes banP {
+    0%{
+        transform: translate(0px,8vw);
+    }
+    25%{
+    	transform: translate(0px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@-moz-keyframes banArt {
+    0%{
+        transform: translate(0px,-8vw);
+    }
+    25%{
+        transform: translate(0px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@-moz-keyframes banP {
+    0%{
+        transform: translate(0px,8vw);
+    }
+    25%{
+    	transform: translate(0px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@-webkit-keyframes banArt {
+    0%{
+        transform: translate(0px,-8vw);
+    }
+    25%{
+        transform: translate(0px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@-webkit-keyframes banP {
+    0%{
+        transform: translate(0px,8vw);
+    }
+    25%{
+    	transform: translate(0px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@-o-keyframes banArt {
+    0%{
+        transform: translate(0px,-8vw);
+    }
+    25%{
+        transform: translate(0px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@-o-keyframes banP {
+    0%{
+        transform: translate(0px,8vw);
+    }
+    25%{
+    	transform: translate(0px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}

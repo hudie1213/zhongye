@@ -140,20 +140,23 @@ a {
 	text-decoration: none;
 	transition: 0.2s;
 }
-.flexnoend{
+
+.flexnoend {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 	align-content: flex-end;
 	flex-wrap: nowrap;
 }
-.flex{
+
+.flex {
 	display: flex;
 	flex-direction: row;
-	justify-content:space-between;
+	justify-content: space-between;
 	align-content: space-between;
 	flex-wrap: nowrap;
 }
+
 header {
 	width: 100%;
 	height: 100%;
@@ -168,10 +171,9 @@ header nav {
 	right: 5%;
 	top: 3%;
 	height: 5vw;
-
 }
 
-header nav a {
+nav a {
 	display: inline-block;
 	height: 5vw;
 	line-height: 5vw;
@@ -181,12 +183,12 @@ header nav a {
 	padding: 0 1vw;
 }
 
-header nav .hover {
+nav .hover {
 	background: #f00;
 	border-radius: 0.8vw;
 }
 
-header nav a:hover {
+nav a:hover {
 	background: #f00;
 	border-radius: 0.8vw;
 }
@@ -203,7 +205,7 @@ header nav a:hover {
 	min-width: 200px;
 	margin: 0 auto 0;
 	top: -75%;
-	overflow: hidden;
+	/*	overflow: hidden;*/
 	position: relative;
 	z-index: 100;
 }
@@ -229,13 +231,54 @@ header nav a:hover {
 	margin: 0 auto;
 }
 
+.banArt {
+	transform: translateY('-8vw');
+	-ms-transform: translateY('-8vw');
+	-moz-transform: translateY('-8vw');
+	-webkit-transform: translateY('-8vw');
+	-o-transform: translateY('-8vw');
+	animation: banArt infinite 4s ease;
+}
+
 .ban p {
 	width: 100%;
 	font-size: 2vw;
 	line-height: 1.5;
 	color: #fff;
 	text-align: center;
-	/*padding-top: 30px;*/
+}
+
+.banP {
+	transform: translateY('8vw');
+	-ms-transform: translateY('8vw');
+	-moz-transform: translateY('8vw');
+	-webkit-transform: translateY('8vw');
+	-o-transform: translateY('8vw');
+	animation: banP infinite 4s ease;
+}
+
+.banList {
+	width: 12vw;
+	min-width: 42px;
+	position: absolute;
+	bottom: 16vw;
+	left: 50%;
+	margin-left: -5vw;
+	z-index: 1000;
+	justify-content: space-around;
+}
+
+.banList span {
+	width: 2vw;
+	display: inline-block;
+	box-sizing: border-box;
+	height: 1vw;
+	background: #f7f7f7;
+	transition: 0.3s;
+}
+
+.banList .spH {
+	background: #0075A9;
 }
 
 .sj {
@@ -287,7 +330,9 @@ header nav a:hover {
 	text-align: center;
 	color: #fff;
 }
-
+.yd_con:hover p,.sy_con:hover p{
+	color: #c40d2e;
+}
 .yd_bj {
 	width: 100%;
 	height: 24vw;
@@ -297,7 +342,6 @@ header nav a:hover {
 .yd {
 	width: 80%;
 	margin: 0 auto;
-
 }
 
 .yd_con {
@@ -307,6 +351,7 @@ header nav a:hover {
 	border-radius: 0.8vw;
 	box-shadow: 5px 5px 5px #999;
 	overflow: hidden;
+	box-sizing: border-box;
 }
 
 .yd_con:nth-child(1) {
@@ -337,6 +382,8 @@ header nav a:hover {
 	text-align: center;
 	margin: 12vw auto 0;
 	color: #333;
+	transition: 0.2s;
+	cursor: default;
 }
 
 .sy_bj {
@@ -370,67 +417,59 @@ header nav a:hover {
 
 .sy_con:nth-child(1) {
 	background: url(../img/775346136596347486_16.jpg) no-repeat center;
-	background-size: 10vw 10vw;
+	
 }
-
 .sy_con:nth-child(2) {
 	background: url(../img/775346136596347486_18.jpg) no-repeat center;
-	background-size: 10vw 10vw;
 }
 
 .sy_con:nth-child(3) {
 	background: url(../img/775346136596347486_20.jpg) no-repeat center;
-	background-size: 10vw 10vw;
 }
 
 .sy_con:nth-child(4) {
 	background: url(../img/775346136596347486_23.jpg) no-repeat center;
-	background-size: 10vw 10vw;
 }
 
 .sy_con:nth-child(5) {
 	background: url(../img/775346136596347486_25.jpg) no-repeat center;
-	background-size: 10vw 10vw;
 }
 
 .sy_con:nth-child(6) {
 	background: url(../img/775346136596347486_27.jpg) no-repeat center;
-	background-size: 10vw 10vw;
 }
 
 .sy_con:nth-child(7) {
 	background: url(../img/775346136596347486_34.jpg) no-repeat center;
-	background-size: 10vw 10vw;
 }
 
 .sy_con:nth-child(8) {
 	background: url(../img/775346136596347486_35.jpg) no-repeat center;
-	background-size: 10vw 10vw;
 }
 
 .sy_con:nth-child(9) {
 	background: url(../img/775346136596347486_36.jpg) no-repeat center;
-	background-size: 10vw 10vw;
 }
 
 .sy_con:nth-child(10) {
 	background: url(../img/775346136596347486_37.jpg) no-repeat center;
-	background-size: 10vw 10vw;
 }
 
 .sy_con:nth-child(11) {
 	background: url(../img/775346136596347486_38.jpg) no-repeat center;
-	background-size: 10vw 10vw;
 }
 
 .sy_con:nth-child(12) {
 	background: url(../img/775346136596347486_39.jpg) no-repeat center;
-	background-size: 10vw 10vw;
 }
-
+.sy_con:nth-child(n){
+	background-size: 8vw 8vw;
+}
 .sy_con p {
 	margin-top: 11vw;
 	font-size: 1.5vw;
+	transition: 0.2s;
+	cursor: default;
 }
 
 .sm_bj {
@@ -564,8 +603,11 @@ header nav a:hover {
 	background: #f15350;
 	border-radius: 0.8vw;
 	box-shadow: 0 3px 4px #333;
+	transition: 0.2s;
 }
-
+.rc_bj a:hover{
+	background: #C40D2E;
+}
 .fa_bj {
 	width: 100%;
 	padding-bottom: 3vw;
@@ -701,11 +743,15 @@ header nav a:hover {
 	color: #333;
 	display: block;
 	margin: 0 auto;
+	transition: 0.2s;
 }
-
+.xwmore:hover{
+	color: #C40D2E;
+	border: 1px solid #C40D2E;
+}
 .lx_bj {
 	width: 100%;
-	background: #f00;
+	background: #00f;
 	padding: 3vw 0;
 }
 
@@ -780,6 +826,12 @@ header nav a:hover {
 	background: none;
 	font-size: 1.5vw;
 	color: #fff;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.sub:hover{
+	color: #C40D2E;
+	border: 2px solid #C40D2E;
 }
 
 .lx_md {
@@ -861,7 +913,7 @@ footer .foot ul {
 }
 
 .foot ul li a:hover {
-	color: #ccc;
+	color: #C40D2E;
 }
 
 footer p {
