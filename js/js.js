@@ -1,37 +1,35 @@
 $(document).ready(function() {
-	$("nav a").eq(n).addClass("hover");
+	var windowWid = $(window).width();
+	var windowHei = $(window).height();
 	$(".zinav a").eq(n).addClass("zihover");
-	$(".ban div").eq(0).css("opacity", "1");
-	$(".ban div").eq(0).siblings().css("opacity", "0");
-	$(".banList span").eq(0).addClass("spH");
-	var a = 1;
-	var b;
 
-	function roll(b) {
+	var al = 1;
+	$(".anliSpan span").eq(0).addClass("anliSpanh").siblings().removeClass("anliSpanh");
 
-		$(".ban .ban_con").eq(b?b:a).animate({ "opacity": "1" }, 1000);
-		$(".ban .ban_con").eq(b?b:a).siblings().css("opacity", "0");
-		$(".banList span").eq(b?b:a).addClass("spH").siblings().removeClass("spH");
-		if(a == 2) {
-			a = -1;
+	function anliroll() {
+		$(".anliSpan span").eq(al).addClass("anliSpanh").siblings().removeClass("anliSpanh");
+		var alt = al * '33.33';
+		$(".anliList_con").css("transform", "translateX(-" + alt + "%)");
+		if(al == 2) {
+			al = -1;
 		}
-		a++;
+		al++;
 	}
-	var time1 = setInterval(roll, 4000)
-//	$(".banList span").click(function() {
-//		var lsIndex = $(this).index();
-//		a = lsIndex;
-//		b = lsIndex;
-//		clearInterval(time1);
-//		roll();
-//		//		$(".ban .ban_con").eq(a).find("article").css("transform", "translate(0px,8vw)");
-//		//		$(".ban .ban_con").eq(a).find("article").siblings("article").css("transform", "translate(0px,-8vw)");
-//		//		$(".ban .ban_con").eq(a).find("article").animate({ "transform": "translate(0px,0vw)" }, 1000);
-//		//		$(".ban .ban_con").eq(a).find("article").siblings("article").animate({ "transform": "translate(0px,0vw)" }, 1000);
-//		//		$(".ban .ban_con").eq(a).animate({ "opacity": "1" }, 1000);
-//		//		$(".ban .ban_con").eq(a).siblings().css("opacity", "0");
-//		$(".banList span").eq(a-1).addClass("spH").siblings().removeClass("spH");
-//		a++;
-//		time1 = setInterval(roll, 4000);
-//	})
+	var anliTime1 = setInterval(anliroll, 4000);
+	$(".anliSpan span").click(function() {
+		var index = $(this).index();
+		var alt = index * '33.33';
+		$(this).addClass("anliSpanh").siblings().removeClass("anliSpanh");
+		$(".anliList_con").css("transform", "translateX(-" + alt + "%)");
+		clearInterval(anliTime1);
+		al = index;
+		anliTime1 = setInterval(anliroll, 4000)
+	})
+	$(".anliList_con").hover(function() {
+		clearInterval(anliTime1);
+	}, function() {
+		anliTime1 = setInterval(anliroll, 4000)
+	})
+
+	
 })
