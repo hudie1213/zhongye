@@ -15,7 +15,7 @@ $(document).ready(function() {
 		}
 		al++;
 	}
-	var anliTime1 = setInterval(anliroll, 4000);
+	var anliTime1 = setInterval(anliroll, 41000);
 	$(".anliSpan span").click(function() {
 		var index = $(this).index();
 		var alt = index * '33.33';
@@ -23,12 +23,12 @@ $(document).ready(function() {
 		$(".anliList_con").css("transform", "translateX(-" + alt + "%)");
 		clearInterval(anliTime1);
 		al = index;
-		anliTime1 = setInterval(anliroll, 4000)
+		anliTime1 = setInterval(anliroll, 14000)
 	})
 	$(".anliList_con").hover(function() {
 		clearInterval(anliTime1);
 	}, function() {
-		anliTime1 = setInterval(anliroll, 4000)
+		anliTime1 = setInterval(anliroll, 41000)
 	})
 
 	

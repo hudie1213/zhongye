@@ -20,9 +20,6 @@
 	.yd_con p {
 		width: 100%;
 	}
-	/*nav{
-		visibility: hidden;
-	}*/
 	.rc_bj h6 {
 		line-height: 1.5;
 	}
@@ -86,10 +83,34 @@
 	footer .foot ul {
 		width: 25%;
 	}
-	.anlicon h1,.anlishow h2{
+	.anlicon h1,
+	.anlishow h2 {
 		min-width: 80px;
 		min-height: 20px;
 		line-height: 20px;
+	}
+	.anlit_text{
+		display: none;
+	}
+	.anliSpan{
+		width: 70px;
+	}
+	.anliSpan span{
+		width: 18px;
+		height: 18px;
+		line-height: 18px;
+	}
+	.anliLi_con{
+		width: 30%;
+	}
+	.c-preview{
+		display: none;
+	}
+	.allx{
+		width: 100px;
+	}
+	.allx p img{
+		width: 15px;
 	}
 }
 
@@ -146,28 +167,27 @@
 		background-size: 150% 150%;
 		background-position-y: 5%;
 	}
-	.inp{
+	.inp {
 		display: block;
 		width: 100%;
 	}
-	.telCode a{
+	.telCode a {
 		display: block;
 		padding: 5px 0;
 		width: 100%;
-		text-align: center;	
+		text-align: center;
 		margin: 1vw auto 0;
 		min-height: 21px;
 	}
-	.telCode input{
+	.telCode input {
 		width: 100%;
-		
 	}
-	.telCode label{
+	.telCode label {
 		margin-top: 0.5vw;
 		line-height: 21px;
 		min-height: 21px;
 	}
-	.telCode{
+	.telCode {
 		flex-wrap: wrap;
 	}
 }
