@@ -19,11 +19,12 @@
 	</head>
 
 	<body>
+		<a name="anli_header"></a>
 		<article class="zihead flex">
 			<a href="../index.html"><img src="../img/logo.png" /></a>
 			<div class="zinav flex">
 				<a href="../index.html">首页</a>
-				<a href="">招商加盟</a>
+				<a href="jiaru.html">招商加盟</a>
 				<a href="anli.html">案例展示</a>
 				<a href="">解决方案</a>
 				<a href="">新闻动态</a>
@@ -31,6 +32,15 @@
 				<a href="">关于我们</a>
 			</div>
 		</article>
+		<!--<img src="../img/logo.png" class="logo" />
+			<nav class="flexnoend" style="position: absolute;right:5vw;top: 3%;">
+				<a href="index.html">&nbsp;&nbsp;首&nbsp;&nbsp;页&nbsp;&nbsp;</a>
+				<a href="ziye/anli.html">成功案例</a>
+				<a href="">解决方案</a>
+				<a href="ziye/jiaru.html">招商加盟</a>
+				<a href="">小程序制作</a>
+				<a href="">关于中也</a>
+			</nav>-->
 		<aside class="allx">
 			<div style="width: 40px;height: 18px;background: #f00;font-size: 13px;margin-top:-1vw;cursor: pointer;text-align: center;line-height: 18px;color: #fff;" onclick="$('.allx').css('display','none')">关闭</div>
 			<h4>电话咨询</h4>
@@ -38,13 +48,32 @@
 			<h4>微信咨询</h4>
 			<img src="../img/erwei.png" class="anlit_img" />
 		</aside>
+		<aside class="jia_ce">
+			<a href="#anli_header"><img src="../img/jiaru/jia_aside.png" /></a>
+		</aside>
+		<script type="text/javascript">
+			$(".jia_ce a").click(function() {
+				if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var $target = $(this.hash);
+					$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+					if($target.length) {
+						var targetOffset = $target.offset().top;
+						$('html,body').animate({ scrollTop: targetOffset }, 800);
+						return false;
+					}
+				}
+			});
+		</script>
 		<article class="anliban">
 			<img src="../img/anliban.jpg" />
 		</article>
+		<div style="width: 100%;height: 3px;background: #ccc;margin-top: 0.5vw;"></div>
 		<article class="anlicon">
 			<h1>通用版案例</h1>
 			<h6>General edition case</h6>
+			<div style="width: 100%;height: 3px;background: #ccc;margin-top: 5vw;"></div>
 			<div id="anlit" class="swiper-container">
+				
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img src="../img/anlit1.jpg" />
@@ -93,6 +122,7 @@
 					</div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 3px;background: #ccc;margin-top: 0.5vw;"></div>
 			<script src="../js/swiper.min.js"></script>
 			<script>
 				var ydSwiper = new Swiper('#anlit', {
@@ -107,7 +137,9 @@
 			<p>Case study</p>
 			<!--循环，三个列表，调用三次查询输出包含图片-->
 			<div class="anliList">
+				<div style="width: 100%;height: 3px;background: #ccc;position: relative;top: 1.3vw;"></div>
 				<div class="anliList_con flex">
+					
 					<div class="anliLi flex">
 						<div class="anliLi_con">
 							<img src="../img/yangma/yang1.jpg" class="anlierwei" />

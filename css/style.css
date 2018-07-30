@@ -162,7 +162,7 @@ a {
 .indexaside {
 	width: 8px;
 	position: fixed;
-	left: 5%;
+	left: 2%;
 	bottom: 10vw;
 	z-index: 10000;
 }
@@ -1080,7 +1080,7 @@ nav a:hover {
 
 footer {
 	width: 100%;
-	padding: 4vw 0 10vw;
+	padding: 4vw 0 3vw;
 	background: #333;
 }
 
@@ -1150,7 +1150,7 @@ footer p {
 .zinav {
 	width: 70%;
 	box-sizing: border-box;
-	margin-top: 2vw;
+	margin-top: 1vw;
 	height: 4.3vw;
 	justify-content: flex-end;
 }
@@ -1158,12 +1158,14 @@ footer p {
 .zinav a {
 	display: inline-block;
 	width: auto;
-	padding: 1vw;
+	height: 5vw;
+	padding:0 1vw;
 	box-sizing: border-box;
 	color: #fff;
 	transition: 0.2s;
 	font-size: 1.3vw;
-	line-height: 2.3vw;
+	line-height: 5vw;
+	border-radius: 0.8vw;
 }
 
 .zinav a:hover {
@@ -1343,13 +1345,13 @@ footer p {
 }
 
 #anlit {
-	margin-top: 5vw;
+	margin-top: 0.5vw;
 	background: url(../img/anlishows/anli01_02.jpg) no-repeat;
 	background-size:100% 100% ;
 }
 .swiper-wrapper{
 	padding: 10vw 0;
-	
+	margin-left: -10vw;
 }
 #anlit .swiper-slide {
 	width: 12vw;
@@ -1408,11 +1410,18 @@ body {
 .c-preview {
 	background: #000;
 	z-index: 2;
-	background: -moz-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
+	/*background: -moz-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);*/
 	/* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
+	/*background: -webkit-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);*/
 	/* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
+	/*background: linear-gradient(135deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);*/
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	
+		/*background: -moz-linear-gradient(-45deg, #000000 0%, #000000 25%, #ccc 50%, #ccc 75%, #fff 100%);*/
+	/* FF3.6-15 */
+	/*background: -webkit-linear-gradient(-45deg, #000000 0%, #000000 25%, #ccc 50%, #ccc 75%, #fff 100%);*/
+	/* Chrome10-25,Safari5.1-6 */
+	/*background: linear-gradient(135deg, #000000 0%, #000000 25%, #ccc 50%, #ccc 75%, #fff 100%);*/
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	background-size: 400% 400%;
 	background-repeat: no-repeat;
@@ -1465,11 +1474,10 @@ body {
 	width: 11vw;
 	position: fixed;
 	right: 0;
-	top: 50%;
+	top: 40%;
 	z-index: 1000;
 	background: #f7f7f7;
 	padding: 1vw 0;
-	margin-top: -14vw;
 	box-shadow: 0 0 3px #333;
 }
 .allx h4 {
@@ -1543,6 +1551,7 @@ body {
 .jia_qj_con{
 	width: 80%;
 	margin: 0 auto;
+	
 }
 .jia_qj_con img{
 	width: 30%;
@@ -1559,6 +1568,9 @@ body {
 	height: 3vw ;
 	padding: 1vw 0;
 	font-size: 1.3vw;
+	opacity: 0;
+	position: relative;
+	left: 3vw;
 }
 .jia_qj_con li a{
 	display: block;
@@ -1703,11 +1715,14 @@ body {
 }
 .jia_ce{
 	width: 5vw;
-	height: 12vw;
+	height: 10vw;
 	position: fixed;
 	right: 0;
-	bottom: 2vw;
+	bottom: 0;
 	cursor: pointer;
+	z-index: 9999999;
+	transition: 0.5s;
+	opacity: 0;
 }
 .jia_ce a{
 	display: block;
