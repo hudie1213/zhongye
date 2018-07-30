@@ -877,10 +877,14 @@ nav a:hover {
 	text-indent: 3vw;
 }
 
-.xw_con ul li:nth-child(1) a {
+.xw_con ul li:nth-child(1) p {
 	color: #0075a9;
+	line-height: 3vw;
+	cursor: default;
 }
-
+.xw_con ul li:hover a p,.xw_con ul li:hover a span{
+	color: #C40D2E;
+}
 .xw_con a {
 	display: block;
 }
@@ -895,12 +899,14 @@ nav a:hover {
 	height: 3vw;
 	line-height: 3vw;
 	color: #5f5f5f;
+	transition: 0.2s;
 }
 
 .xw_con a span {
 	float: right;
 	color: #9a9a9a;
 	line-height: 3vw;
+	transition: 0.2s;
 }
 
 .xwmore {
@@ -1181,14 +1187,10 @@ footer p {
 .anlicon {
 	width: 100%;
 	margin-top: 4vw;
-	height: 0;
-	padding-bottom: 60%;
-	/*background: url(../img/anli_con.jpg) no-repeat top;*/
-	background: #ffff;
-	background-size: 100%;
-	background-position-y: 12vw;
+	height: 60vw;
 	overflow: hidden;
 	position: relative;
+
 }
 
 .anlicon h1,
@@ -1229,11 +1231,12 @@ footer p {
 	width: 100%;
 	flex-wrap: wrap !important;
 	box-sizing: border-box;
+	justify-content: flex-start !important;
 }
 
 .anliLi_con {
 	width: 20%;
-	margin: 2vw 0.83%;
+	margin: 2vw 2.5%;
 	padding: 0 0 1vw;
 	box-sizing: border-box;
 	box-shadow: 0 3px 5px #333;
@@ -1340,17 +1343,19 @@ footer p {
 }
 
 #anlit {
-	margin-top: 13vw;
+	margin-top: 5vw;
+	background: url(../img/anlishows/anli01_02.jpg) no-repeat;
+	background-size:100% 100% ;
 }
-
+.swiper-wrapper{
+	padding: 10vw 0;
+	
+}
 #anlit .swiper-slide {
 	width: 12vw;
 	height: 25.2vw;
 	margin: 0 0 0 18vw;
-	border-radius: 2.5vw;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+	border-radius: 2.5vw;	
 	position: relative;
 	overflow: hidden;
 }
@@ -1390,18 +1395,6 @@ footer p {
 	opacity: 1;
 }
 
-
-/*.anlit_text{
-	width: 100%;
-	height: 25.2vw;
-	background: rgba(0,0,0,0.5);
-	position: absolute;
-	left: 0;
-	top: 0;
-	opacity: 0;
-	transition: 0.2s;
-	border-radius: 2vw;
-}*/
 
 body {
 	font-family: 'Segoe UI', 'San Francisco', Calibri, Helvetica, Arial, sans-serif;
@@ -1516,4 +1509,209 @@ body {
 	margin: 0 10%;
 	
 	transition: 0.75s 0.2s;
+}
+.jia_ban{
+	width: 100%;
+	height: 36vw;
+	background: url(../img/jiaru/jiaru_ban.jpg) no-repeat;
+	background-size:100% 100% ;
+}
+.jia_ban a{
+	width:6vw;
+	text-align: center;
+	display:inline-block ;
+	font-size:1.2vw ;
+	color: #fff;
+	background: #03aef5;
+	border-radius: 0.5vw;
+	padding: 1.2vw 2.4vw;
+	margin: 19vw 44vw 0;
+}
+.jia_qj h1{
+	text-align: center;
+	font-size: 2.5vw;
+	padding: 5vw 0 0.5vw;
+	
+}
+.underline{
+	width: 4vw;
+	height: 0.3vw;
+	margin: 0 auto 3vw;
+	background: #03aef5;
+	border-radius: 0.15vw;
+}
+.jia_qj_con{
+	width: 80%;
+	margin: 0 auto;
+}
+.jia_qj_con img{
+	width: 30%;
+	padding: 0 5%;
+	display: inline-block;
+}
+.jia_qj_con ul{
+	width: 58%;
+	display: inline-block;
+	float:right ;
+}
+.jia_qj_con li{
+	width: 100%;
+	height: 3vw ;
+	padding: 1vw 0;
+	font-size: 1.3vw;
+}
+.jia_qj_con li a{
+	display: block;
+	text-indent: 5vw;
+	line-height: 3vw;
+	color: #333;
+}
+.jia_qj_con li:nth-child(1){
+	background: url(../img/jiaru/jiaru_ul1.jpg) no-repeat left center;
+	background-size:3.5vw 3.5vw ;
+}
+.jia_qj_con li:nth-child(2){
+	background: url(../img/jiaru/jiaru_ul2.jpg) no-repeat left center;
+	background-size:3.5vw 3.5vw ;
+}
+.jia_qj_con li:nth-child(3){
+	background: url(../img/jiaru/jiaru_ul3.jpg) no-repeat left center;
+	background-size:3.5vw 3.5vw ;
+}
+.jia_qj_con li:nth-child(4){
+	background: url(../img/jiaru/jiaru_ul4.jpg) no-repeat left center;
+	background-size:3.5vw 3.5vw ;
+}
+.jia_qj_con li:nth-child(5){
+	background: url(../img/jiaru/jiaru_ul5.jpg) no-repeat left center;
+	background-size:3.5vw 3.5vw ;
+}
+.jia_zc{
+	margin-top: 3vw;
+}
+.jia_zc h2{
+	color: #333;
+	text-align: center;
+	font-size: 2.5vw;
+	padding-bottom: 0.5vw;
+	padding-top: 5vw;
+}
+.jia_zc ul{
+	width: 80%;
+	margin: 0 auto;
+}
+.jia_zc ul li{
+	width: 16.66%;
+}
+.jia_zc ul li:hover img{
+	transform: rotate(30deg);
+}
+.jia_zc img{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	transition:1s;
+}
+.jia_zc ul li h6{
+	padding-top: 3vw;
+	text-align: center;
+	font-size: 1.8vw;
+	color: #333;
+	padding-bottom: 1.5vw;
+	cursor: default;
+}
+.jia_zc ul li p{
+	text-align: center;
+	font-size: 1.2vw;
+	color: #333;
+	padding-bottom: 1vw;
+	cursor: default;
+}
+.jia_ys h2{
+	text-align: center;
+	font-size: 2.5vw;
+	padding-bottom: 0.5vw;
+	padding-top: 5vw;
+}
+.jia_ys_bj{
+	width: 100%;
+	height: 35.2vw;
+	background: url(../img/jiaru/jiaru_2bj.jpg) no-repeat;
+	background-size:100% 100% ;
+	padding-top: 8vw;
+}
+.jia_ys_con{
+	width: 80%;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.5);
+}
+.jia_ys_con img{
+	width: 35%;
+	margin: 0;
+	display: inline-block;
+	float: left;
+}
+.
+.jia_ys_conp{
+	width: 60%;
+	padding: 0 0 0 5%;
+	float: right;
+	display: inline-block;
+}
+.jia_ys_conp p{
+	font-size: 1.8vw;
+	text-align: center;
+	padding: 0.8vw 0;
+	width: 100%;
+}
+.jiatit{
+	text-align: center;
+	padding-top: 5vw;
+	padding-bottom: 0.5vw;
+	text-align: center;
+	font-size: 2.5vw;
+}
+.jia_fb{
+	height: 50vw;
+	overflow: hidden;
+}
+
+.jia_lc_con{
+	width: 80%;
+	margin: 0 auto;
+}
+.jia_lc_con img{
+	width: 94%;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 2vw;
+}
+.jia_lc_con ul{
+	width: 100%;
+	margin-bottom: 8vw;
+}
+.jia_lc_con li{
+	width: 20%;
+	text-align: center;
+	line-height: 2vw;
+	height: 2vw;
+	font-size: 1.3vw;
+	color: #333;
+}
+.jia_lc_con li span{
+	font-size: 1vw ;
+}
+.jia_ce{
+	width: 5vw;
+	height: 12vw;
+	position: fixed;
+	right: 0;
+	bottom: 2vw;
+	cursor: pointer;
+}
+.jia_ce a{
+	display: block;
+}
+.jia_ce img{
+	width: 100%;
 }

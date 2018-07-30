@@ -102,6 +102,12 @@
 	}
 	.anliLi_con{
 		width: 30%;
+		margin: 2% 1.55%;
+	}
+	.anlierwei{
+		width: 18vw;
+		height: 18vw;
+		margin: 0 3.5vw;
 	}
 	.c-preview{
 		display: none;
@@ -153,6 +159,16 @@
 	}
 	.lx_md p {
 		text-indent: 10px;
+	}
+	.anliLi_con{
+		width: 45%;
+		margin: 2% 2.5%;
+	}
+	.anlierwei{
+		width: 36vw;
+		height: 36vw;
+		padding: 0 0 3vw;
+		margin: 0 4.5vw;
 	}
 }
 

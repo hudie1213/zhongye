@@ -16,21 +16,26 @@
 				border: 0;
 				text-decoration: none;
 			}
-
+			
+			body {
+				overflow: hidden;
+			}
 			
 			.map-service {
-				width: 748px;
-				height: 618px;
+				width: 53vw;
+				height: 45vw;
+				margin: 0 auto;
 				position: relative;
-				background: #000;
-				transform: scale(0.8, 0.8);
+				/*background: #000;*/
+				transform: scale(0.6, 0.6);
 			}
 			
 			.china-map {
-				width: 748px;
-				height: 618px;
+				width: 53vw;
+				height: 45vw;
 				margin: 0 auto;
-				background: url(img/map_black_bg.png) center no-repeat;
+				background: url(img/map_black_bg.jpg) center no-repeat;
+				background-size: 100% 100%;
 				position: relative;
 			}
 			
@@ -98,10 +103,10 @@
 			
 			.area-box .dot {
 				position: absolute;
-				left: 2.2px;
-				top: 1.5px;
-				width: 10px;
-				height: 10px;
+				left:0 ;
+				top: 0;
+				width: 1vw;
+				height: 1vw;
 				-webkit-border-radius: 50%;
 				-moz-border-radius: 50%;
 				border-radius: 50%;
@@ -112,14 +117,14 @@
 			
 			.area-box .pulse {
 				position: absolute;
-				top: -28px;
-				left: -28px;
-				height: 66px;
-				width: 66px;
+				top: -2.1vw;
+				left: -2.1vw;
+				height: 4.7vw;
+				width: 4.7vw;
 				border: 2px solid #b7b7b7;
 				-webkit-border-radius: 48px;
 				-moz-border-radius: 48px;
-				border-radius: 48px;
+				border-radius: 50%;
 				-webkit-box-shadow: 0 0 4px #82878f, 0 0 10px #82878f inset;
 				-moz-box-shadow: 0 0 4px #82878f, 0 0 10px #82878f inset;
 				box-shadow: 0 0 4px #82878f, 0 0 10px #82878f inset;
@@ -219,10 +224,10 @@
 			
 			.region-list.active .area-box .pulse {
 				border-color: #009fd9;
-				top: -39px;
-				left: -39px;
-				height: 88px;
-				width: 88px;
+				top: -2.89vw;
+				left: -2.89vw;
+				height: 6.28vw;
+				width: 6.28vw;
 				-webkit-box-shadow: 0 0 12px #0080d9, 0 0 20px #0080d9 inset;
 				-moz-box-shadow: 0 0 12px #0080d9, 0 0 20px #0080d9 inset;
 				box-shadow: 0 0 12px #0080d9, 0 0 20px #0080d9 inset
@@ -260,8 +265,8 @@
 			.show-regin span {
 				width: 80px;
 				position: absolute;
-				left: 8px;
-				top: -11px;
+				left: 0;
+				top: 0;
 				padding: 6px 10px;
 				font-size: 14px;
 				color: #ccc;
@@ -298,111 +303,166 @@
 			}
 			
 			.postition-1 {
-				left: 302px;
-				top: 308px
+				left: 10vw;
+				top: 25vw
 			}
 			
 			.postition-2 {
-				left: 401px;
-				top: 403px
+				left: 26vw;
+				top: 26vw
 			}
 			
 			.postition-3 {
-				left: 358px;
-				top: 516px
+				left: 19vw;
+				top: 20vw
 			}
 			
 			.postition-4 {
-				left: 473px;
-				top: 348px
+				left:32vw;
+				top: 22vw
 			}
 			
 			.postition-5 {
-				left: 526px;
-				top: 394px
+				left: 37vw;
+				top: 25vw
 			}
 			
 			.postition-6 {
-				left: 526px;
-				top: 515px
+				left:40vw;
+				top: 34vw
 			}
 			
 			.postition-7 {
-				left: 652px;
-				top: 200px
+				left: 45vw;
+				top: 13vw
 			}
 			
 			.postition-7.region-list.active .area-box .pulse {
-				top: -50px;
-				left: -50px;
-				width: 110px;
-				height: 110px;
+				top: -3.67vw;
+				left: -3.67vw;
+				width: 7.85vw;
+				height: 7.85vw;
 				-webkit-border-radius: 50%;
 				-moz-border-radius: 50%;
 				border-radius: 50%
 			}
 			
 			.postition-8 {
-				left: 559px;
-				top: 229px
+				left: 40vw;
+				top: 15vw
 			}
 			
 			.postition-9 {
-				left: 637px;
-				top: 371px
+				left:45vw;
+				top: 22vw
 			}
 			
 			.postition-9.region-list.active .area-box .pulse {
-				top: -50px;
-				left: -50px;
-				width: 110px;
-				height: 110px;
+				top: -3.67vw;
+				left: -3.67vw;
+				width: 7.85vw;
+				height: 7.85vw;
 				-webkit-border-radius: 50%;
 				-moz-border-radius: 50%;
 				border-radius: 50%
 			}
 			
 			.postition-10 {
-				left: 554px;
-				top: 539px
+				left: 41.5vw;
+				top: 35vw
 			}
 			
 			.postition-11 {
-				left: 604px;
-				top: 300px
+				left: 43vw;
+				top: 19vw
 			}
 			
 			.postition-13 {
-				left: 470px;
-				top: 250px
+				left: 34vw;
+				top: 15vw
 			}
-			.postition-14{
-				left: 510px;
-				top: 275px;
+			
+			.postition-14 {
+				left: 36vw;
+				top: 18vw
 			}
-			.postition-15{
-				left: 670px;
-				top: 110px;
+			
+			.postition-15 {
+				left: 48vw;
+				top: 8vw;
 			}
-			.postition-16{
-				left: 670px;
-				top: 150px;
+			
+			.postition-16 {
+				left: 47vw;
+				top: 11vw;
 			}
-			.postition-17{
-				left: 390px;
-				top: 320px;
+			
+			.postition-17 {
+				left:28vw;
+				top: 21vw;
 			}
-			.postition-18{
-				left: 150px;
-				top: 180px;
+			
+			.postition-18 {
+				left: 12vw;
+				top: 15vw;
 			}
-			.postition-19{
-				left: 430px;
-				top: 300px;
+			
+			.postition-19 {
+				left: 29.5vw;
+				top: 18.5vw;
 			}
-			.postition-20{
-				/*left: 430px;
-				top: 350px;*/
+			
+			.postition-20 {
+				left: 38vw;
+				top: 21.5vw
+			}
+			.postition-21 {
+				left: 46vw;
+				top: 26vw
+			}
+			.postition-22{
+				left: 42vw;
+				top: 24vw
+			}
+			.postition-23{
+				left: 42vw;
+				top: 28vw
+			}
+			.postition-24{
+				left: 45vw;
+				top: 30vw
+			}
+			.postition-25{
+				left: 37vw;
+				top: 29vw
+			}
+			.postition-26{
+				left: 34vw;
+				top: 34vw
+			}
+			.postition-27{
+				left: 36vw;
+				top: 40vw;
+			}
+			.postition-28{
+				left: 25vw;
+				top: 33vw;
+			}
+			.postition-29{
+				left: 32vw;
+				top: 29vw;
+			}
+			.postition-30{
+				left: 48vw;
+				top: 25vw;
+			}
+			.postition-31{
+				left: 42vw;
+				top: 16vw;
+			}
+			.postition-32{
+				left: 29vw;
+				top: 25vw;
 			}
 			.douhao {
 				width: 0
@@ -413,209 +473,199 @@
 
 	<body>
 
-		
 		<div class="map-service">
 			<div class="china-map">
-				<div class="region-list postition-1 online-node">
-					<div class="area-box">
-						<span class="dot"></span>
-						<span class="pulse delay-01"></span>
-						<span class="pulse delay-02"></span>
-					</div>
+				<div class="region-list active postition-1 online-node">
+					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
+						<span class="pulse delay-05"></span>
+						<span class="pulse delay-04"></span></div>
+					<!--<div class="show-regin"><span>西藏</span></div>-->
 				</div>
 				<div class="region-list active postition-2 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
 						<span class="pulse delay-05"></span>
 						<span class="pulse delay-04"></span></div>
-					<div class="show-regin"><span>四川</span></div>
+					<!--<div class="show-regin"><span>四川</span></div>-->
 				</div>
-				<div class="region-list postition-3 online-node">
-					<div class="area-box"><span class="dot"></span><span class="pulse delay-01"></span>
-						<span class="pulse delay-02"></span>
-					</div>
-				</div>
-				<div class="region-list waite postition-4 waite-node">
-					<div class="area-box"><span class="dot"></span><span class="pulse delay-01"></span>
-						<span class="pulse delay-02"></span>
-					</div>
-					<div class="show-regin"><span>陕西</span></div>
-				</div>
-				<div class="region-list waite postition-5 waite-node">
-					<div class="area-box"><span class="dot"></span><span class="pulse delay-01"></span>
-						<span class="pulse delay-02"></span>
-					</div>
-					<div class="show-regin"><span>湖北</span></div>
-				</div>
-				<div class="region-list active postition-6 online-node">
+				<div class="region-list active postition-3 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
 						<span class="pulse delay-05"></span>
 						<span class="pulse delay-04"></span></div>
-					<div class="show-regin"><span>广东</span></div>
+					<!--<div class="show-regin"><span>青海</span></div>-->
 				</div>
-				<div class="region-list active postition-13 online-node">
+				<div class="region-list active postition-4 waite-node">
+					<div class="area-box"><span class="dot"></span><span class="pulse delay-01"></span>
+						<span class="pulse delay-02"></span>
+					</div>
+					<!--<div class="show-regin"><span>陕西</span></div>-->
+				</div>
+				<div class="region-list active postition-5 waite-node">
+					<div class="area-box"><span class="dot"></span><span class="pulse delay-01"></span>
+						<span class="pulse delay-02"></span>
+					</div>
+					<!--<div class="show-regin"><span>湖北</span></div>-->
+				</div>
+				<div class="region-list waite postition-6 online-node">
+					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
+						<span class="pulse delay-05"></span>
+						<span class="pulse delay-04"></span></div>
+					<!--<div class="show-regin"><span>广东</span></div>-->
+				</div>
+				<div class="region-list waite postition-13 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-04"></span>
 						<span class="pulse delay-05"></span>
 						<span class="pulse delay-03"></span></div>
-					<div class="show-regin"><span>内蒙古</span></div>
+					<!--<div class="show-regin"><span>内蒙古</span></div>-->
 				</div>
-				<div class="region-list  active  postition-11 online-node">
+				<div class="region-list  waite  postition-11 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
 						<span class="pulse delay-05"></span>
 						<span class="pulse delay-04"></span></div>
-					<div class="show-regin"><span>山东</span></div>
+					<!--<div class="show-regin"><span>山东</span></div>-->
 				</div>
 				<div class="region-list active postition-7 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
 						<span class="pulse delay-09"></span>
 						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>辽宁</span></div>
+					<!--<div class="show-regin"><span>辽宁</span></div>-->
 				</div>
 				<div class="region-list waite postition-8 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
 						<span class="pulse delay-05"></span>
 						<span class="pulse delay-04"></span></span>
 					</div>
-					<div class="show-regin"><span>北京</span></div>
+					<!--<div class="show-regin"><span>北京</span></div>-->
 				</div>
-				<div class="region-list active postition-9 online-node">
+				<div class="region-list waite postition-9 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
 						<span class="pulse delay-09"></span>
 						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>江苏</span></div>
+					<!--<div class="show-regin"><span>江苏</span></div>-->
 				</div>
-				<div class="region-list active postition-10 online-node">
+				<div class="region-list waite postition-10 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
 						<span class="pulse delay-05"></span>
 						<span class="pulse delay-04"></span></div>
-					<div class="show-regin"><span>香港</span></div>
+					<!--<div class="show-regin"><span>香港</span></div>-->
 				</div>
-				
-				
-				
+
 				<div class="region-list active postition-14 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
 						<span class="pulse delay-09"></span>
 						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>山西</span></div>
+					<!--<div class="show-regin"><span>山西</span></div>-->
 				</div>
 				<div class="region-list active postition-15 online-node">
-					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
-						<span class="pulse delay-09"></span>
-						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>黑龙江</span></div>
+					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
+						<span class="pulse delay-05"></span>
+						<span class="pulse delay-04"></span></div>
+					<!--<div class="show-regin"><span>黑龙江</span></div>-->
 				</div>
 				<div class="region-list active postition-16 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
 						<span class="pulse delay-09"></span>
 						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>吉林</span></div>
+					<!--<div class="show-regin"><span>吉林</span></div>-->
 				</div>
 				<div class="region-list active postition-17 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
 						<span class="pulse delay-09"></span>
 						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>甘肃</span></div>
+					<!--<div class="show-regin"><span>甘肃</span></div>-->
 				</div>
 				<div class="region-list active postition-18 online-node">
-					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
-						<span class="pulse delay-09"></span>
-						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>新疆维吾尔自治区</span></div>
+					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
+						<span class="pulse delay-05"></span>
+						<span class="pulse delay-04"></span></div>
+					<!--<div class="show-regin"><span>新疆维吾尔自治区</span></div>-->
 				</div>
 				<div class="region-list active postition-19 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
 						<span class="pulse delay-09"></span>
 						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>宁夏回族自治区</span></div>
+					<!--<div class="show-regin"><span>宁夏回族自治区</span></div>-->
 				</div>
 				<div class="region-list active postition-20 online-node">
-					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
-						<span class="pulse delay-09"></span>
-						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>河南</span></div>
+					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
+						<span class="pulse delay-05"></span>
+						<span class="pulse delay-04"></span></div>
+					<!--<div class="show-regin"><span>河南</span></div>-->
 				</div>
-				<!--<div class="region-list active postition-9 online-node">
+				<div class="region-list waite postition-21 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
 						<span class="pulse delay-09"></span>
 						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>浙江</span></div>
+					<!--<div class="show-regin"><span>浙江</span></div>-->
 				</div>
-				<div class="region-list active postition-9 online-node">
+				<div class="region-list active postition-22 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
 						<span class="pulse delay-09"></span>
 						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>安徽</span></div>
+					<!--<div class="show-regin"><span>安徽</span></div>-->
 				</div>
-				<div class="region-list active postition-9 online-node">
-					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
-						<span class="pulse delay-09"></span>
-						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>江西</span></div>
+				<div class="region-list active postition-23 online-node">
+					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
+						<span class="pulse delay-05"></span>
+						<span class="pulse delay-04"></span></div>
+					<!--<div class="show-regin"><span>江西</span></div>-->
 				</div>
-				<div class="region-list active postition-9 online-node">
+				<div class="region-list waite postition-24 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
 						<span class="pulse delay-09"></span>
 						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>福建</span></div>
+					<!--<div class="show-regin"><span>福建</span></div>-->
 				</div>
-				<div class="region-list active postition-9 online-node">
+				<div class="region-list active postition-25 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
 						<span class="pulse delay-09"></span>
 						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>湖南</span></div>
+					<!--<div class="show-regin"><span>湖南</span></div>-->
 				</div>
-				<div class="region-list active postition-9 online-node">
-					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
-						<span class="pulse delay-09"></span>
-						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>广西壮族自治区</span></div>
+				<div class="region-list active postition-26 online-node">
+					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
+						<span class="pulse delay-05"></span>
+						<span class="pulse delay-04"></span></div>
+					<!--<div class="show-regin"><span>广西壮族自治区</span></div>-->
 				</div>
-				<div class="region-list active postition-9 online-node">
-					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
-						<span class="pulse delay-09"></span>
-						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>海南</span></div>
+				<div class="region-list active postition-27 online-node">
+					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
+						<span class="pulse delay-05"></span>
+						<span class="pulse delay-04"></span></div>
+					<!--<div class="show-regin"><span>海南</span></div>-->
 				</div>
-				<div class="region-list active postition-9 online-node">
-					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
-						<span class="pulse delay-09"></span>
-						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>云南</span></div>
+				<div class="region-list active postition-28 online-node">
+					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
+						<span class="pulse delay-05"></span>
+						<span class="pulse delay-04"></span></div>
+					<!--<div class="show-regin"><span>云南</span></div>-->
 				</div>
-				<div class="region-list active postition-9 online-node">
+				<div class="region-list active postition-29 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
 						<span class="pulse delay-09"></span>
 						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>贵州</span></div>
+					<!--<div class="show-regin"><span>贵州</span></div>-->
 				</div>
-				<div class="region-list active postition-9 online-node">
-					<div class="area-box"><span class="dot"></span><span class="pulse delay-10"></span>
-						<span class="pulse delay-09"></span>
-						<span class="pulse delay-08"></span></div>
-					<div class="show-regin"><span>西藏自治区</span></div>
-				</div>-->
-				<!--<div class="region-list waite postition-8 online-node">
+				<div class="region-list waite postition-30 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
 						<span class="pulse delay-05"></span>
 						<span class="pulse delay-04"></span></span>
 					</div>
-					<div class="show-regin"><span>上海</span></div>
+					<!--<div class="show-regin"><span>上海</span></div>-->
 				</div>
-				<div class="region-list waite postition-8 online-node">
+				<div class="region-list waite postition-31 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
 						<span class="pulse delay-05"></span>
 						<span class="pulse delay-04"></span></span>
 					</div>
-					<div class="show-regin"><span>天津</span></div>
+					<!--<div class="show-regin"><span>天津</span></div>-->
 				</div>
-				<div class="region-list waite postition-8 online-node">
+				<div class="region-list waite postition-32 online-node">
 					<div class="area-box"><span class="dot"></span><span class="pulse delay-06"></span>
 						<span class="pulse delay-05"></span>
 						<span class="pulse delay-04"></span></span>
 					</div>
-					<div class="show-regin"><span>重庆</span></div>
-				</div>-->
-			</div>
+					<!--<div class="show-regin"><span>重庆</span></div>-->
+				</div>
 
 		</div>
 
