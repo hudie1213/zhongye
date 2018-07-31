@@ -30,36 +30,56 @@ $(document).ready(function() {
 	}, function() {
 		anliTime1 = setInterval(anliroll, 4000)
 	})
-	$(".jia_ce").css("opacity", "0");
+	$(".ce_nav").css("opacity", "0");
 	$(document).scroll(function() {
 		var top = $(document).scrollTop();
 		if(top < 300) {
-			//			$(".jia_ce").animate({ "opacity": "0" }, 300)
-			$(".jia_ce").css( "opacity","0");
-		} else if(top>=500) {
-			//			$(".jia_ce").animate({ "opacity": "1" }, 300)
-			$(".jia_ce").css( "opacity","1");
+			$(".ce_nav").css("opacity", "0");
+		} else if(top >= 500) {
+			$(".ce_nav").css("opacity", "1");
 		}
-		
-		
-		var targetOffset1 = $(".jia_qj_con").offset().top;
-		if(top+400>targetOffset1){
-			$(".jia_qj_con li").eq(0).animate({"left":"0","opacity":"1"},500);
-			setTimeout(function(){
-				$(".jia_qj_con li").eq(1).animate({"left":"0","opacity":"1"},500);
-			},300)
-			setTimeout(function(){
-				$(".jia_qj_con li").eq(2).animate({"left":"0","opacity":"1"},500);
-			},600)
-			setTimeout(function(){
-				$(".jia_qj_con li").eq(3).animate({"left":"0","opacity":"1"},500);
-			},900)
-			setTimeout(function(){
-				$(".jia_qj_con li").eq(4).animate({"left":"0","opacity":"1"},500);
-			},1200)
-		}
-//		else if(top-50<=targetOffset1){
-//			$(".jia_qj_con li").eq(0).animate({"left":"0","opacity":"1"},1000);
-//		}
+
 	})
+	$(".ce_nav a").click(function() {
+		if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			var $target = $(this.hash);
+			$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+			if($target.length) {
+				var targetOffset = $target.offset().top;
+				$('html,body').animate({ scrollTop: targetOffset }, 800);
+				return false;
+			}
+		}
+	});
+	$(".job_shou1").click(function() {
+		$(".about_need1").css({ "opacity": "1", "transform": "scale(1,1)", "left": "12.5%" });
+	})
+	$(".job_shou2").click(function() {
+		$(".about_need2").css({ "opacity": "1", "transform": "scale(1,1)", "left": "12.5%" });
+	})
+	$(".job_shou3").click(function() {
+		$(".about_need3").css({ "opacity": "1", "transform": "scale(1,1)", "left": "12.5%" });
+	})
+	$(".job_shou4").click(function() {
+		$(".about_need4").css({ "opacity": "1", "transform": "scale(1,1)", "left": "12.5%" });
+	})
+	$(".job_shou5").click(function() {
+		$(".about_need5").css({ "opacity": "1", "transform": "scale(1,1)", "left": "12.5%" });
+	})
+	$(".about_close1").click(function() {
+		$(".about_need1").css({ "opacity": "0", "transform": "scale(0,0)", "left": "-30%" });
+	})
+	$(".about_close2").click(function() {
+		$(".about_need2").css({ "opacity": "0", "transform": "scale(0,0)", "left": "-5%" });
+	})
+	$(".about_close3").click(function() {
+		$(".about_need3").css({ "opacity": "0", "transform": "scale(0,0)", "left": "12.5%" });
+	})
+	$(".about_close4").click(function() {
+		$(".about_need4").css({ "opacity": "0", "transform": "scale(0,0)", "left": "30%" });
+	})
+	$(".about_close5").click(function() {
+		$(".about_need5").css({ "opacity": "0", "transform": "scale(0,0)", "left": "50%" });
+	})
+
 })

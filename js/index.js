@@ -5,7 +5,7 @@ $(document).ready(function() {
 	$(".banList span").eq(0).addClass("spH");
 	var a = 1;
 	$(".smv").smoove({
-		offset: '40%'
+		offset: '15%'
 	})
 
 	function roll() {
