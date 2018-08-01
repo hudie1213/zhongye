@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>中也科技</title>
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<link rel="icon" href="../favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/media.css" />
+		<link rel="stylesheet" type="text/css" href="../css/keyframes.css" />
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="../js/jquery_smoove.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<a name="header"></a>
+		<article class="zihead flex">
+			<a href="../index.html"><img src="../img/logo.png" /></a>
+			<div class="zinav flex">
+				<a href="../index.html">首页</a>
+				<a href="anli.html">成功案例</a>
+				<a href="fa.html">解决方案</a>
+				<a href="jiaru.html">招商加盟</a>
+				<a href="create.html">小程序制作</a>
+				<a href="zixun.html">新闻动态</a>
+				<a href="about.html">关于中也</a>
+			</div>
+		</article>
+		<aside class="ce_nav">
+			<a href="#header"><img src="../img/jiaru/jia_aside.png" />
+				<p class="ce_navp">返回顶部</p>
+			</a>
+		</aside>
+		<script type="text/javascript">
+			
+			$(".ce_nav a").click(function() {
+				if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var $target = $(this.hash);
+					$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+					if($target.length) {
+						var targetOffset = $target.offset().top;
+						$('html,body').animate({ scrollTop: targetOffset }, 800);
+						return false;
+					}
+				}
+			});
+		</script>
+		<article class="zixun_header">
+			<img src="../img/zixun/xinwen01_02.jpg" />
+		</article>
+		<!--以上为头部-->
+		
+		
+		
+		
+		<script defer type="text/javascript">
+			n=4;
+		</script>
+		
+	</body>
+</html>

@@ -13,12 +13,11 @@
 		<link rel="stylesheet" type="text/css" href="../css/media.css" />
 		<link rel="stylesheet" type="text/css" href="../css/keyframes.css" />
 		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="../js/jquery_smoove.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script defer src="../js/js.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
-		<a name="about_header"></a>
+		<a name="header"></a>
 		<article class="zihead flex">
 			<a href="../index.html"><img src="../img/logo.png" /></a>
 			<div class="zinav flex">
@@ -27,21 +26,17 @@
 				<a href="fa.html">解决方案</a>
 				<a href="jiaru.html">招商加盟</a>
 				<a href="create.html">小程序制作</a>
+				<a href="zixun.html">新闻动态</a>
 				<a href="about.html">关于中也</a>
 			</div>
 		</article>
-		<article class="about_header">
-			<img src="../img/about/guanyu01_02.jpg" />
-			<div class="about_header_con">
-				<img src="../img/ban1.png">
-				<p class="vw1_5">中也者，天下之大本也1<br />The great world of China is also</p>
-			</div>
-		</article>
 		<aside class="ce_nav">
-			<a href="#about_header"><img src="../img/jiaru/jia_aside.png" /><p class="ce_navp">返回顶部</p></a>
+			<a href="#header"><img src="../img/jiaru/jia_aside.png" />
+				<p class="ce_navp">返回顶部</p>
+			</a>
 		</aside>
 		<script type="text/javascript">
-			$(".jia_ce a").click(function() {
+			$(".ce_nav a").click(function() {
 				if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 					var $target = $(this.hash);
 					$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
@@ -53,6 +48,15 @@
 				}
 			});
 		</script>
+		<!--以上为头部-->
+		<article class="about_header">
+			<img src="../img/about/guanyu01_02.jpg" />
+			<div class="about_header_con">
+				<img src="../img/ban1.png">
+				<p class="vw1_5">中也者，天下之大本也1<br />The great world of China is also</p>
+			</div>
+		</article>
+
 		<article class="about_con">
 			<h1 class="about_tit tit">关于我们</h1>
 			<h6 class="about_desc vw1_2">我们致力于小程序开发 拥有者行业领先团队</h6>
@@ -65,7 +69,7 @@
 		<article class="about_show">
 			<img src="../img/about/about_showbj.png" />
 			<div class="flex about_show_con">
-				<div class="about_show_cont vw1_2 smv" data-move-x="-200px">
+				<div class="about_show_cont ">
 					<div style="width: 100%;height: 100%;background: rgba(255,255,255,0.5);position: absolute;z-index: 1;"></div>
 					<img src="../img/about/about_show_icon1.png" />
 					<h6>业务范围：</h6>
@@ -73,7 +77,7 @@
 					<p>主要模板包含：商城、门店、同城、外卖、酒店、婚纱、影视、宠物、地产等解决方案。</p>
 					<p>定制版小程序：定制版小程序使用于大型企业、政府部门。该小程序设计的成本较高，开发制作难度较大，当然伴随着这些难度做出的效果也是别具一格的，定制开发版的成功案例如：摩拜单车、京东商城、腾讯视频等。</p>
 				</div>
-				<div class="about_show_cont smv"  data-move-x="200px">
+				<div class="about_show_cont " >
 					<div style="width: 100%;height: 100%;background: rgba(255,255,255,0.5);position: absolute;"></div>
 					<img src="../img/about/about_show_icon2.png" />
 					<h6>中也科技企业文化：</h6>
@@ -88,7 +92,7 @@
 			<ul class="flex">
 				<li><img src="../img/about/about_add1.png" />
 					<h6>销售主管</h6>
-					<p class="job_shou1">职位要求</p>
+					<p class="job_shou1 job_shou">职位要求</p>
 					<div class="about_need about_need1">
 						<img src="../img/about/close.png" class="about_close about_close1" />
 						<h6>岗位职责</h6>
@@ -104,7 +108,7 @@
 				</li>
 				<li><img src="../img/about/about_add2.png" />
 					<h6>市场营销</h6>
-					<p class="job_shou2">职位要求</p>
+					<p class="job_shou2 job_shou">职位要求</p>
 					<div class="about_need about_need2">
 						<img src="../img/about/close.png" class="about_close about_close2" />
 						<h6>岗位职责</h6>
@@ -120,7 +124,7 @@
 				</li>
 				<li><img src="../img/about/about_add3.png" />
 					<h6>营销策划</h6>
-					<p class="job_shou3">职位要求</p>
+					<p class="job_shou3 job_shou">职位要求</p>
 					<div class="about_need about_need3">
 						<img src="../img/about/close.png" class="about_close about_close3" />
 						<h6>岗位职责</h6>
@@ -136,7 +140,7 @@
 				</li>
 				<li><img src="../img/about/about_add4.png" />
 					<h6>新媒体运营</h6>
-					<p class="job_shou4">职位要求</p>
+					<p class="job_shou4 job_shou">职位要求</p>
 					<div class="about_need about_need4">
 						<img src="../img/about/close.png" class="about_close about_close4" />
 						<h6>岗位职责</h6>
@@ -152,7 +156,7 @@
 				</li>
 				<li><img src="../img/about/about_add5.png" />
 					<h6>电话销售</h6>
-					<p class="job_shou5">职位要求</p>
+					<p class="job_shou5 job_shou">职位要求</p>
 					<div class="about_need about_need5">
 						<img src="../img/about/close.png" class="about_close about_close5" />
 						<h6>岗位职责</h6>
@@ -239,10 +243,28 @@
 			</div>
 			<p class="vw1_2">版权所有©2011-2018&nbsp;中也科技有限公司&nbsp;版权归中也科技所有盗用必究<br />中也科技整体互联网+解决方案专家&nbsp;&nbsp;&nbsp;&nbsp;京ICP备18024938号</p>
 		</footer>
-		<script type="text/javascript">
-			n = 5;
-			$(".smv").smoove({
-				offset: '20vw'
+		<script defer type="text/javascript">
+			n = 6;
+			$(document).ready(function() {
+				var top;
+				var winHei = $(window).height();
+				var targetOffset1 = $(".about_show").offset().top;
+				$(document).scroll(function() {
+					top = $(document).scrollTop();
+					if((top + (0.7 * winHei)) > targetOffset1) {
+						$(".about_show_cont").css({ "transform": "translateX(0)", "opacity": "1" });
+					}
+				})
+				$(".job_shou").click(function() {
+					var i = $(this).parent().index();
+					$(".about_need").eq(i).css({ "opacity": "1", "transform": "scale(1,1)", "left": "12.5%" });
+				})
+				var aboutLeft = new Array("-30%", "-5%", "12.5%", "30%", "50%");
+				$(".about_close").click(function() {
+					var i = $(this).parent().parent().index();
+					console.log(i);
+					$(".about_need").eq(i).css({ "opacity": "0", "transform": "scale(0,0)", "left": aboutLeft[i] });
+				})
 			})
 		</script>
 	</body>

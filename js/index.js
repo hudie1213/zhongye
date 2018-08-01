@@ -3,13 +3,10 @@ $(document).ready(function() {
 	$(".ban div").eq(0).css("opacity", "1");
 	$(".ban div").eq(0).siblings().css("opacity", "0");
 	$(".banList span").eq(0).addClass("spH");
+	var winHei = $(window).height();
 	var a = 1;
-	$(".smv").smoove({
-		offset: '15%'
-	})
 
 	function roll() {
-
 		$(".ban .ban_con").eq(a).animate({ "opacity": "1" }, 1000);
 		$(".ban .ban_con").eq(a).siblings().css("opacity", "0");
 		$(".banList span").eq(a).addClass("spH").siblings().removeClass("spH");
@@ -19,34 +16,42 @@ $(document).ready(function() {
 		a++;
 	}
 	var time1 = setInterval(roll, 4000)
-
 	$(".indexaside a").eq(0).addClass("indAsidea");
+	$(".userForm").css("transform", "translateX(-15vw)");
+	$(".lx_md").css("transform", "translateX(15vw)");
+	var jr = new Array();
+	for(i = 0; i < $(".jrc").length; i++) {
+		jr.push($(".jrc").eq(i).offset().top);
+	}
 	$(document).scroll(function() {
-		var targetOffset1 = $("header").offset().top;
-		var targetOffset2 = $(".sy_bj").offset().top;
-		var targetOffset3 = $(".sm_bj").offset().top;
-		var targetOffset4 = $(".rc_bj").offset().top;
-		var targetOffset5 = $(".fa_bj").offset().top;
-		var targetOffset6 = $(".hz_bj").offset().top;
-		var targetOffset7 = $(".xw_bj").offset().top;
-		var targetOffset8 = $(".lx_bj").offset().top;
 		var top = $(document).scrollTop();
 		if(top < 300) {
 			$(".indexaside a").eq(0).addClass("indAsidea").siblings().removeClass("indAsidea");
-		} else if(top < targetOffset2) {
-			$(".indexaside a").eq(1).addClass("indAsidea").siblings().removeClass("indAsidea");
-		} else if(top < targetOffset3) {
-			$(".indexaside a").eq(2).addClass("indAsidea").siblings().removeClass("indAsidea");
-		} else if(top < targetOffset4) {
-			$(".indexaside a").eq(3).addClass("indAsidea").siblings().removeClass("indAsidea");
-		} else if(top < targetOffset5) {
-			$(".indexaside a").eq(4).addClass("indAsidea").siblings().removeClass("indAsidea");
-		} else if(top < targetOffset6) {
-			$(".indexaside a").eq(5).addClass("indAsidea").siblings().removeClass("indAsidea");
-		} else if(top < targetOffset7) {
-			$(".indexaside a").eq(6).addClass("indAsidea").siblings().removeClass("indAsidea");
-		} else if(top < targetOffset8) {
-			$(".indexaside a").eq(7).addClass("indAsidea").siblings().removeClass("indAsidea");
+		}
+		for(q = 1; q < jr.length; q++) {
+			if(top < jr[q] && top > jr[(q - 1)]) {
+				$(".indexaside a").eq(q).addClass("indAsidea").siblings().removeClass("indAsidea");
+			}
+		}
+
+		if((top + (0.7 * winHei)) > jr[1] && (top + (0.7 * winHei)) < jr[2]) {
+			$(".sy_bj").css({ "transform": "translateY(0)", "opacity": "1" });
+		} else if((top + (0.7 * winHei)) > jr[2] && (top + (0.7 * winHei)) < jr[3]) {
+			$(".sm_bj").css({ "transform": "translateY(0)", "opacity": "1" });
+		} else if((top + (0.7 * winHei)) > jr[3] && (top + (0.7 * winHei)) < jr[4]) {
+			$(".rc_bj").css({ "transform": "translateY(0)", "opacity": "1" });
+			$(".rc_one").css("transform", "translateX(0)");
+		} else if((top + (0.7 * winHei)) > jr[4] && (top + (0.7 * winHei)) < jr[5]) {
+			$(".fa_bj").css({ "transform": "translateY(0)", "opacity": "1" });
+		} else if((top + (0.7 * winHei)) > jr[5] && (top + (0.7 * winHei)) < jr[6]) {
+			$(".hz_bj").css({ "transform": "translateY(0)", "opacity": "1" });
+		} else if((top + (0.7 * winHei)) > jr[6] && (top + (0.7 * winHei)) < jr[7]) {
+			$(".xw_bj").css({ "transform": "translateY(0)", "opacity": "1" });
+			$(".xw_con ul").css("transform", "translateX(0)");
+		} else if((top + (0.7 * winHei)) > jr[7]) {
+			$(".lx_bj").css({ "transform": "translateY(0)", "opacity": "1" });
+			$(".userForm").css("transform", "translateX(0)");
+			$(".lx_md").css("transform", "translateX(0)");
 		}
 	});
 

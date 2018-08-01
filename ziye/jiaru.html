@@ -13,13 +13,12 @@
 		<link rel="stylesheet" type="text/css" href="../css/media.css" />
 		<link rel="stylesheet" type="text/css" href="../css/keyframes.css" />
 		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="../js/jquery_smoove.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script defer src="../js/js.js" type="text/javascript" charset="utf-8"></script>
 
 	</head>
 
 	<body>
-		<a name="jia_header"></a>
+		<a name="header"></a>
 		<article class="zihead flex">
 			<a href="../index.html"><img src="../img/logo.png" /></a>
 			<div class="zinav flex">
@@ -28,9 +27,29 @@
 				<a href="fa.html">解决方案</a>
 				<a href="jiaru.html">招商加盟</a>
 				<a href="create.html">小程序制作</a>
+				<a href="zixun.html">新闻动态</a>
 				<a href="about.html">关于中也</a>
 			</div>
 		</article>
+		<aside class="ce_nav">
+			<a href="#header"><img src="../img/jiaru/jia_aside.png" />
+				<p class="ce_navp">返回顶部</p>
+			</a>
+		</aside>
+		<script type="text/javascript">
+			$(".ce_nav a").click(function() {
+				if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var $target = $(this.hash);
+					$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+					if($target.length) {
+						var targetOffset = $target.offset().top;
+						$('html,body').animate({ scrollTop: targetOffset }, 800);
+						return false;
+					}
+				}
+			});
+		</script>
+		<!--以上为头部-->
 		<aside class="allx">
 			<div style="width: 40px;height: 18px;background: #f00;font-size: 13px;margin-top:-1vw;cursor: pointer;text-align: center;line-height: 18px;color: #fff;" onclick="$('.allx').css('display','none')">关闭</div>
 			<h4>电话咨询</h4>
@@ -38,13 +57,23 @@
 			<h4>微信咨询</h4>
 			<img src="../img/erwei.png" class="anlit_img" />
 		</aside>
-		<aside class="ce_nav">
-			<a href="#jia_header"><img src="../img/jiaru/jia_aside.png" /><p class="ce_navp">返回顶部</p></a>
-		</aside>
 
 		<article class="jia_ban">
 			<a href="#jia_lx" class="vw1_2">立即加盟</a>
 		</article>
+		<script defer type="text/javascript">
+			$(".jia_ban a").click(function() {
+				if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var $target = $(this.hash);
+					$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+					if($target.length) {
+						var targetOffset = $target.offset().top;
+						$('html,body').animate({ scrollTop: targetOffset }, 800);
+						return false;
+					}
+				}
+			});
+		</script>
 		<article class="jia_qj">
 			<h1 class="jiatit tit">加盟中也科技的前景</h1>
 			<div class="underline"></div>
@@ -156,9 +185,9 @@
 		</article>
 		<a name="jia_lx"></a>
 		<article class="lx_bj">
-			<h2 class="smv tit">联系我们</h2>
+			<h2 class=" tit">联系我们</h2>
 			<div class="lx flex">
-				<form action="#" method="post" class="userForm flex smv" data-move-x="-200px">
+				<form action="#" method="post" class="userForm flex ">
 					<input type="text" placeholder="姓名" class="inp vw1_2" name="name" value="" />
 					<input type="tel" placeholder="手机" class="inp vw1_2" name="tel" value="" />
 					<div class="telCode flex">
@@ -169,7 +198,7 @@
 					<textarea name="yijian" placeholder="您的反馈"></textarea>
 					<input type="submit" class="sub vw1_5" value="提交" />
 				</form>
-				<div class="lx_md smv" data-move-x="200px">
+				<div class="lx_md ">
 					<h6>详细地址</h6>
 					<p>北京市昌平区超前路c区</p>
 					<h6>联系电话</h6>
@@ -179,24 +208,17 @@
 				</div>
 			</div>
 		</article>
-		<script type="text/javascript">
-			$(".jia_ban a").click(function() {
-				if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-					var $target = $(this.hash);
-					$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
-					if($target.length) {
-						var targetOffset = $target.offset().top;
-						$('html,body').animate({ scrollTop: targetOffset }, 800);
-						return false;
-					}
-				}
-			});
-		</script>
-		<script type="text/javascript">
+
+		<script defer type="text/javascript">
 			$(document).ready(function() {
+				n=3;
 				var top;
+				var winHei = $(window).height();
+				var targetOffset2 = $(".lx_bj").offset().top;
+				$(".userForm").css("transform", "translateX(-15vw)");
+				$(".lx_md").css("transform", "translateX(15vw)");
 				$(document).scroll(function() {
-					 top = $(document).scrollTop();
+					top = $(document).scrollTop();
 					var targetOffset1 = $(".jia_qj_con").offset().top;
 					if(top + 400 > targetOffset1) {
 						$(".jia_qj_con li").eq(0).animate({ "left": "0", "opacity": "1" }, 500);
@@ -212,6 +234,11 @@
 						setTimeout(function() {
 							$(".jia_qj_con li").eq(4).animate({ "left": "0", "opacity": "1" }, 500);
 						}, 1200)
+					}
+					if((top + (0.7 * winHei)) > targetOffset2) {
+						$(".lx_bj").css({ "opacity":"1","transform":"translateY(0)"});
+						$(".userForm").css("transform", "translateX(0)");
+						$(".lx_md").css("transform", "translateX(0)");
 					}
 				})
 			})
@@ -285,12 +312,6 @@
 			</div>
 			<p class="vw1_2">版权所有©2011-2018&nbsp;中也科技有限公司&nbsp;版权归中也科技所有盗用必究<br />中也科技整体互联网+解决方案专家&nbsp;&nbsp;&nbsp;&nbsp;京ICP备18024938号</p>
 		</footer>
-		<script type="text/javascript">
-			var n = 3;
-			$(".smv").smoove({
-				offset: '20vw'
-			})
-		</script>
 	</body>
 
 </html>
