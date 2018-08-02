@@ -23,6 +23,9 @@ $(document).ready(function() {
 	for(i = 0; i < $(".jrc").length; i++) {
 		jr.push($(".jrc").eq(i).offset().top);
 	}
+	for(i in jr) {
+		console.log(jr[i]);
+	}
 	$(document).scroll(function() {
 		var top = $(document).scrollTop();
 		if(top < 300) {
@@ -34,21 +37,21 @@ $(document).ready(function() {
 			}
 		}
 
-		if((top + (0.7 * winHei)) > jr[1] && (top + (0.7 * winHei)) < jr[2]) {
+		if((top + (0.5 * winHei)) > jr[1] && (top + (0.5 * winHei)) < jr[2]) {
 			$(".sy_bj").css({ "transform": "translateY(0)", "opacity": "1" });
-		} else if((top + (0.7 * winHei)) > jr[2] && (top + (0.7 * winHei)) < jr[3]) {
+		} else if((top + (0.5 * winHei)) > jr[2] && (top + (0.5 * winHei)) < jr[3]) {
 			$(".sm_bj").css({ "transform": "translateY(0)", "opacity": "1" });
-		} else if((top + (0.7 * winHei)) > jr[3] && (top + (0.7 * winHei)) < jr[4]) {
+		} else if((top + (0.5 * winHei)) > jr[3] && (top + (0.5 * winHei)) < jr[4]) {
 			$(".rc_bj").css({ "transform": "translateY(0)", "opacity": "1" });
 			$(".rc_one").css("transform", "translateX(0)");
-		} else if((top + (0.7 * winHei)) > jr[4] && (top + (0.7 * winHei)) < jr[5]) {
+		} else if((top + (0.5 * winHei)) > jr[4] && (top + (0.5 * winHei)) < jr[5]) {
 			$(".fa_bj").css({ "transform": "translateY(0)", "opacity": "1" });
-		} else if((top + (0.7 * winHei)) > jr[5] && (top + (0.7 * winHei)) < jr[6]) {
+		} else if((top + (0.5 * winHei)) > jr[5] && (top + (0.5 * winHei)) < jr[6]) {
 			$(".hz_bj").css({ "transform": "translateY(0)", "opacity": "1" });
-		} else if((top + (0.7 * winHei)) > jr[6] && (top + (0.7 * winHei)) < jr[7]) {
+		} else if((top + (0.5 * winHei)) > jr[6] && (top + (0.5 * winHei)) < jr[7]) {
 			$(".xw_bj").css({ "transform": "translateY(0)", "opacity": "1" });
 			$(".xw_con ul").css("transform", "translateX(0)");
-		} else if((top + (0.7 * winHei)) > jr[7]) {
+		} else if((top + (0.5 * winHei)) > jr[7]) {
 			$(".lx_bj").css({ "transform": "translateY(0)", "opacity": "1" });
 			$(".userForm").css("transform", "translateX(0)");
 			$(".lx_md").css("transform", "translateX(0)");
