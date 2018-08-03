@@ -6,7 +6,7 @@ $(document).ready(function() {
 	$(".ce_nav").css("opacity", "0");
 
 	$(document).scroll(function() {
-		var top = $(document).scrollTop();
+		var top  = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 		if(top < 300) {
 			$(".ce_nav").css("opacity", "0");
 		} else if(top >= 500) {

@@ -165,6 +165,7 @@ a {
 }
 
 .flexnoend {
+	position: absolute;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
@@ -211,11 +212,11 @@ header {
 	position: relative;
 }
 
-header nav {
+header ul {
 	width: 95%;
 	position: absolute;
 	right: 5%;
-	top: 3%;
+	top: 3vw;
 	height: 5vw;
 }
 
@@ -232,24 +233,43 @@ header nav {
 	display: block;
 }
 
-nav a {
+.flexnoend li {
 	display: inline-block;
-	height: 5vw;
-	line-height: 5vw;
 	background: none;
+}
+
+.flexnoend a {
+	display: block;
 	color: #fff;
 	font-size: 1.6vw;
 	padding: 0 1vw;
+	height: 5vw;
+	line-height: 5vw;
+	border-radius: 0.8vw;
+	position: relative;
 }
 
-nav .hover {
+.flexnoend .hover {
 	background: #f00;
 	border-radius: 0.8vw;
 }
 
-nav a:hover {
+.flexnoend a:hover {
 	background: #f00;
 	border-radius: 0.8vw;
+}
+
+.flexnoend li div {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.flexnoend li:hover>a {
+	background: #F00;
+}
+
+.flexnoend li:hover div {
+	opacity: 1;
 }
 
 .banvid {
@@ -534,7 +554,6 @@ nav a:hover {
 .sm_bj {
 	width: 100%;
 	opacity: 0;
-	transform: translateY(5vw);
 	transition: 1s;
 }
 
@@ -732,16 +751,19 @@ nav a:hover {
 	padding: 3vw 0 8vw;
 	overflow: hidden;
 	margin: 0 auto;
+	position: relative;
 }
 
-.fa_con a {
+.fa_con>div {
 	display: inline-block;
 	width: 22%;
 	margin: 0 1.5%;
 	position: relative;
+	cursor: default;
+	overflow: hidden;
 }
 
-.fa_con a div {
+.fa_con div div {
 	width: 100%;
 	height: 13.3vw;
 	position: absolute;
@@ -751,48 +773,48 @@ nav a:hover {
 	/*animation: zhuan 2s paused linear;*/
 }
 
-.fa_con a:nth-child(1) div {
+.fa_con div:nth-child(1) div {
 	background: url(../img/8899.png);
 	background-size: 100% 100%;
 	transform: rotate(45deg);
 }
 
-.fa_con a:nth-child(2) div {
+.fa_con div:nth-child(2) div {
 	background: url(../img/4433.png);
 	background-size: 100% 100%;
 	transform: rotate(0deg);
 }
 
-.fa_con a:nth-child(3) div {
+.fa_con div:nth-child(3) div {
 	background: url(../img/fa_redbj.png);
 	background-size: 100% 100%;
 }
 
-.fa_con a:nth-child(4) div {
+.fa_con div:nth-child(4) div {
 	background: url(../img/6677.png);
 	background-size: 100% 100%;
 	transform: rotate(0deg);
 }
 
-.fa_con a:nth-child(5) div {
+.fa_con div:nth-child(5) div {
 	background: url(../img/1122.png);
 	background-size: 100% 100%;
 	transform: rotate(-45deg);
 }
 
-.fa_con a:nth-child(1):hover div {
+.fa_con div:nth-child(1):hover div {
 	transform: rotate(0deg);
 }
 
-.fa_con a:nth-child(2):hover div {
+.fa_con div:nth-child(2):hover div {
 	transform: rotate(-45deg);
 }
 
-.fa_con a:nth-child(4):hover div {
+.fa_con div:nth-child(4):hover div {
 	transform: rotate(45deg);
 }
 
-.fa_con a:nth-child(5):hover div {
+.fa_con div:nth-child(5):hover div {
 	transform: rotate(0deg);
 }
 
@@ -805,7 +827,7 @@ nav a:hover {
 	}
 }
 
-.fa_con a p {
+.fa_con div p {
 	color: #fff;
 	text-align: center;
 	height: 13.3vw;
@@ -813,6 +835,12 @@ nav a:hover {
 	position: relative;
 	z-index: 5;
 	font-size: 3vw;
+}
+
+.fa_con img {
+	width: 100%;
+	position: absolute;
+	left: 0;
 }
 
 .fa_bj img {
@@ -825,7 +853,6 @@ nav a:hover {
 	background: #f1f1f1;
 	padding: 3vw 0 5vw;
 	opacity: 0;
-	transform: translateY(5vw);
 	transition: 1s;
 }
 
@@ -1226,7 +1253,7 @@ footer p {
 .zihead {
 	width: 100%;
 	box-sizing: border-box;
-	background: rgba(45,45,45,0.5);
+	background: rgba(45, 45, 45, 0.5);
 	padding: 1vw 3vw;
 	position: absolute;
 	z-index: 99999;
@@ -1243,62 +1270,68 @@ footer p {
 	margin-top: 1vw;
 	height: 4.3vw;
 	justify-content: flex-end;
-
 }
 
 .zinav>li {
 	display: inline-block;
 	width: auto;
 	height: 5vw;
-	
 	border-radius: 0.8vw;
 	position: relative;
-}.zinav a{
+}
+
+.zinav a {
 	transition: 1s;
 }
-.zinav>li>a{
+
+.zinav>li>a {
 	display: block;
 	padding: 0 1vw;
 	box-sizing: border-box;
 	color: #fff;
 	transition: 0.2s;
-	font-size: 1.3vw;
+	font-size: 1.6vw;
 	line-height: 5vw;
 	border-radius: 0.8vw;
 }
-.zinav li:hover>a{
+
+.zinav li:hover>a {
 	background: #ee3808;
 }
-.zinav li:hover div{
+
+.zinav li:hover div {
 	opacity: 1;
 }
-.zinav li:hover div a{
+
+.zinav li:hover div a {
 	color: #fff;
 }
-.zinav div{
+
+.zinav div {
 	position: absolute;
 	top: 5vw;
-	width: 7.3vw;
+	width: 100%;
 	height: 10vw;
 	opacity: 1;
 	transition: 1s;
 	opacity: 0;
-	background: rgba(45,45,45,0.5);
+	background: rgba(45, 45, 45, 0.5);
 	border-radius: 0.8vw;
 }
-.zinav div a{
-	display:block;
+
+.zinav div a {
+	display: block;
 	width: 100%;
 	height: 5vw;
 	box-sizing: border-box;
 	transition: 0.2s;
-	font-size: 1.3vw;
+	font-size: 1.6vw;
 	line-height: 5vw;
 	border-radius: 0.8vw;
 	padding: 0 1vw;
 	color: #fff;
-	
 }
+
 .zinav a:hover {
 	background: #ee3808;
 }
@@ -1377,6 +1410,7 @@ footer p {
 	cursor: pointer;
 	transition: 0.5s;
 	display: block;
+	max-height: 19vw;
 }
 
 .anliLi_img {
@@ -1497,6 +1531,7 @@ footer p {
 	border-radius: 2.5vw;
 	position: relative;
 	overflow: hidden;
+	transition: 0.5s;
 }
 
 #anlit .swiper-slide:nth-child(1) {
@@ -1526,8 +1561,8 @@ footer p {
 	transition: 0.2s;
 }
 
-#anlit .swiper-slide:hover>img {
-	/*	transform: scale(1.2, 1.2);*/
+#anlit .swiper-slide:hover {
+	transform: scale(1.2, 1.2);
 }
 
 #anlit .swiper-slide:hover .anlit_text {
@@ -1595,8 +1630,8 @@ footer p {
 	width: 11vw;
 	position: fixed;
 	right: 0;
-	top: 40%;
-	z-index: 1000;
+	top: 35%;
+	z-index: 9999999;
 	background: #f7f7f7;
 	padding: 1vw 0;
 	box-shadow: 0 0 3px #333;
@@ -1645,8 +1680,8 @@ footer p {
 .jia_ban {
 	width: 100%;
 	height: 36vw;
-	background: url(../img/jiaru/jiaru_ban.jpg) no-repeat;
-	background-size: 100% 100%;
+	background: url(../img/jiaru/jiaru_ban.jpg) no-repeat center top;
+	background-size: 120% 120%;
 }
 
 .jia_ban a {
@@ -1657,7 +1692,7 @@ footer p {
 	background: #03aef5;
 	border-radius: 0.5vw;
 	padding: 1.2vw 2.4vw;
-	margin: 19vw 44vw 0;
+	margin: 23vw 44vw 0;
 }
 
 .jia_qj h1 {
@@ -1679,12 +1714,12 @@ footer p {
 
 .jia_qj_con img {
 	width: 30%;
-	padding: 0 5%;
+	padding: 0 2%;
 	display: inline-block;
 }
 
 .jia_qj_con ul {
-	width: 58%;
+	width: 64%;
 	display: inline-block;
 	float: right;
 }
@@ -1697,9 +1732,6 @@ footer p {
 	opacity: 0;
 	position: relative;
 	left: 3vw;
-}
-
-.jia_qj_con li a {
 	display: block;
 	text-indent: 5vw;
 	line-height: 3vw;
@@ -1964,6 +1996,7 @@ footer p {
 	height: 35vw;
 	transition: 1s;
 	opacity: 0;
+	min-height:300px ;
 }
 
 .about_show_cont:nth-child(1) {
@@ -2151,6 +2184,7 @@ footer p {
 
 .zixun_con_ul ul li {
 	height: 2.2vw;
+	min-height: 24px;
 	line-height: 2.2vw;
 }
 
@@ -2162,6 +2196,13 @@ footer p {
 .fa_header img {
 	width: 100%;
 	display: block;
+}
+
+.fa_header_con {
+	position: absolute;
+	width: 30%;
+	left: 35%;
+	top: 40%;
 }
 
 .o2o {
@@ -2522,7 +2563,7 @@ footer p {
 .dianshang_con_txt h6 {
 	float: left;
 	display: inline-block;
-	width: 20%;
+	width: 22%;
 	text-align: center;
 	font-size: 1.2vw;
 }
@@ -2532,7 +2573,7 @@ footer p {
 }
 
 .ds_con_short {
-	width: 80%;
+	width: 78%;
 	float: left;
 	line-height: 1.5;
 	display: inline-block;
@@ -2625,6 +2666,7 @@ footer p {
 
 .qy_icon {
 	margin-left: 8vw;
+	box-sizing: border-box;
 }
 
 .qy_icon img {

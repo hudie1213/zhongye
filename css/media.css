@@ -89,33 +89,33 @@
 		min-height: 20px;
 		line-height: 20px;
 	}
-	.anlit_text{
+	.anlit_text {
 		display: none;
 	}
-	.anliSpan{
+	.anliSpan {
 		width: 70px;
 	}
-	.anliSpan span{
+	.anliSpan span {
 		width: 18px;
 		height: 18px;
 		line-height: 18px;
 	}
-	.anliLi_con{
+	.anliLi_con {
 		width: 30%;
 		margin: 2% 1.55%;
 	}
-	.anlierwei{
+	.anlierwei {
 		width: 18vw;
 		height: 18vw;
 		margin: 0 3.5vw;
 	}
-	.c-preview{
+	.c-preview {
 		display: none;
 	}
-	.allx{
+	.allx {
 		width: 100px;
 	}
-	.allx p img{
+	.allx p img {
 		width: 15px;
 	}
 }
@@ -143,6 +143,13 @@
 		font-size: 16px;
 		line-height: 28px;
 	}
+	.allx p img {
+		display: none;
+	}
+	.about_add li {
+		width: 15%;
+		overflow: hidden;
+	}
 }
 
 @media only screen and (min-width: 100px) and (max-width: 480px) {
@@ -160,11 +167,11 @@
 	.lx_md p {
 		text-indent: 10px;
 	}
-	.anliLi_con{
+	.anliLi_con {
 		width: 45%;
 		margin: 2% 2.5%;
 	}
-	.anlierwei{
+	.anlierwei {
 		width: 36vw;
 		height: 36vw;
 		padding: 0 0 3vw;
@@ -205,5 +212,65 @@
 	}
 	.telCode {
 		flex-wrap: wrap;
+	}
+}
+
+@media only screen and (min-height: 100px) and (max-height: 1400px) {
+	.yj_mark .o2o_con1,
+	.yj_mark .o2o_con2,
+	.yj_mark .o2o_con3,
+	.yj_mark .o2o_con4 {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	.yj_mark .o2o_con5 {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	.lx_bj {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	.userForm {
+		transform: translateX(0) !important;
+	}
+	.lx_md {
+		transform: translateX(0) !important;
+	}
+}
+
+@media only screen and (min-width: 620px) and (max-width: 1100px) {
+	.yd_con p {
+		margin: 10vw auto 0;
+	}
+	.zixun_con_ul ul li span {
+		display: none;
+	}
+	.zixun_con_ul ul li p {
+		width: 100%;
+	}
+	.o2o_con1 .o2o_cont,.o2o_con2 .o2o_cont,.o2o_con3 .o2o_cont,.o2o_con4 .o2o_cont{
+		width: 34vw;
+	}
+	.o2o_con5 .o2o_cont{
+		width: 41vw;
+	}
+	.o2o_con1,.o2o_con3{
+		left: 2%;
+	}
+	.o2o_con3,.o2o_con4{
+		top: 38%;
+	}
+	.o2o_con2,.o2o_con4{
+		right: 5%;
+	}
+	.o2o_con1 .o2o_img{
+		width: 30vw;
+	}
+}
+
+@media only screen and (min-width: 100px) and (max-width: 820px) {
+	.dianshang_cont {
+		width: 55%;
 	}
 }

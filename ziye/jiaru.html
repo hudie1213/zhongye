@@ -21,7 +21,7 @@
 		<a name="header"></a>
 		<article class="zihead flex">
 			<a href="../index.html"><img src="../img/logo.png" /></a>
-			<div class="zinav flex">
+			<ul class="zinav flex">
 				<li>
 					<a href="../index.html">&nbsp;&nbsp;首&nbsp;&nbsp;页&nbsp;&nbsp;</a>
 				</li>
@@ -35,7 +35,7 @@
 					<a href="jiaru.html">招商加盟</a>
 				</li>
 				<li>
-					<a href="create.html">小程序制作</a>
+					<a href="http://www.zhongyekeji.com.cn">小程序制作</a>
 				</li>
 				<li>
 					<a href="#">关于中也</a>
@@ -44,12 +44,19 @@
 						<a href="about.html">关于我们</a>
 					</div>
 				</li>
-			</div>
+			</ul>
 		</article>
 		<aside class="ce_nav">
 			<a href="#header"><img src="../img/jiaru/jia_aside.png" />
 				<p class="ce_navp">返回顶部</p>
 			</a>
+		</aside>
+		<aside class="allx">
+			<div style="width: 40px;height: 18px;background: #f00;font-size: 13px;margin-top:-1vw;cursor: pointer;text-align: center;line-height: 18px;color: #fff;" onclick="$('.allx').css('display','none')">关闭</div>
+			<h4>电话咨询</h4>
+			<p><img src="../img/tel.png" />13911811915</p>
+			<h4>微信咨询</h4>
+			<img src="../img/erwei.png" class="anlit_img" />
 		</aside>
 		<script type="text/javascript">
 			$(".ce_nav a").click(function() {
@@ -96,19 +103,19 @@
 				<img src="../img/jiaru/jiaru_1.jpg" />
 				<ul>
 					<li>
-						<a href="">OEM模式，做自己的品牌</a>
+						OEM模式，做自己的品牌
 					</li>
 					<li>
-						<a href="">海量模板，自由组合，随心搭配，满足更多客户需求的搭配</a>
+						海量模板，自由组合，随心搭配，满足更多客户需求的搭配
 					</li>
 					<li>
-						<a href="">操作简单，300秒生成自己的</a>
+						操作简单，300秒生成自己的
 					</li>
 					<li>
-						<a href="">模块自定义首页，页面多样化，满足视觉差异化需求</a>
+						模块自定义首页，页面多样化，满足视觉差异化需求
 					</li>
 					<li>
-						<a href="">会员卡、优惠券、满减、砍价、秒杀、首单立减...营销手段丰富</a>
+						会员卡、优惠券、满减、砍价、秒杀、首单立减...营销手段丰富
 					</li>
 				</ul>
 			</div>
@@ -232,6 +239,23 @@
 				var targetOffset2 = $(".lx_bj").offset().top;
 				$(".userForm").css("transform", "translateX(-15vw)");
 				$(".lx_md").css("transform", "translateX(15vw)");
+				top = $(document).scrollTop();
+					var targetOffset1 = $(".jia_qj_con").offset().top;
+					if(top + 400 > targetOffset1) {
+						$(".jia_qj_con li").eq(0).animate({ "left": "0", "opacity": "1" }, 500);
+						setTimeout(function() {
+							$(".jia_qj_con li").eq(1).animate({ "left": "0", "opacity": "1" }, 500);
+						}, 300)
+						setTimeout(function() {
+							$(".jia_qj_con li").eq(2).animate({ "left": "0", "opacity": "1" }, 500);
+						}, 600)
+						setTimeout(function() {
+							$(".jia_qj_con li").eq(3).animate({ "left": "0", "opacity": "1" }, 500);
+						}, 900)
+						setTimeout(function() {
+							$(".jia_qj_con li").eq(4).animate({ "left": "0", "opacity": "1" }, 500);
+						}, 1200)
+					}
 				$(document).scroll(function() {
 					top = $(document).scrollTop();
 					var targetOffset1 = $(".jia_qj_con").offset().top;
