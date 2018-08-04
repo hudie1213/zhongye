@@ -1255,7 +1255,7 @@ footer p {
 	box-sizing: border-box;
 	background: rgba(45, 45, 45, 0.5);
 	padding: 1vw 3vw;
-	position: absolute;
+	position: fixed;
 	z-index: 99999;
 }
 
@@ -1996,7 +1996,7 @@ footer p {
 	height: 35vw;
 	transition: 1s;
 	opacity: 0;
-	min-height:300px ;
+	min-height: 300px;
 }
 
 .about_show_cont:nth-child(1) {
@@ -2694,4 +2694,241 @@ footer p {
 
 .yj h2 {
 	margin-top: 8vw;
+}
+.zixunList_con{
+	width: 95%;
+	margin: 0 2.5%;
+}
+.zixunList_con h1{
+	font-size: 2.5vw;
+	text-align: center;
+	height: 8vw;
+	line-height: 8vw;
+}
+
+.zixun_banner{
+	width: 60%;
+	margin-bottom: 3vw;
+}
+.banner {
+	width: 100%;
+	height: 30vw;
+	overflow: hidden;
+	position: relative;
+	font-size: 0
+}
+
+.b-img {
+	height: 30vw;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.b-img a {
+	display: block;
+	height: 30vw;
+	float: left;
+	background-size: 100% 100%;
+}
+
+.b-list {
+	height: 20px;
+	bottom: 10px;
+	position: absolute;
+	margin: 0;
+	left: 50%;
+	margin-left: -3.75vw;
+	z-index: 999;
+}
+
+.b-list span {
+	display: block;
+	cursor: pointer;
+	/*width: 14px;*/
+	/*height: 8px;*/
+	/*border-radius: 50%;*/
+	/*border: 3px solid #fff;*/
+	width: 1.5vw;
+	height: 1vw;
+	float: left;
+	margin: 0 0.5vw;
+	_margin: 0 3px;
+	background: #fff;
+}
+
+.b-list .spcss {
+	/*border: 3px solid #14ab04;*/
+	background: #14ab04;
+}
+
+.bar-left {
+	position: absolute;
+	z-index: 1;
+	display: block;
+	width: 8vw;
+	height: 30vw;
+	left: 0px;
+	background: none;
+	top: 0px;
+	cursor: pointer;
+}
+
+.bar-right {
+	position: absolute;
+	z-index: 1;
+	display: block;
+	width: 8vw;
+	height: 30vw;
+	right: 0px;
+	background: none;
+	top: 0px;
+	cursor: pointer;
+}
+
+.bar-left em {
+	display: block;
+	width: 8vw;
+	height: 30vw;
+	background: url(../img/zixun/arrow_left.png) no-repeat;
+	background-size: 8vw 30vw;
+	margin: 0 auto;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.bar-right em {
+	display: block;
+	width: 8vw;
+	height: 30vw;
+	background: url(../img/zixun/arrow_right.png) no-repeat;
+	background-size: 8vw 30vw;
+	margin: 0 auto;
+	opacity: 0;
+	transition: 0.5s;
+}
+.bar-left:hover em,.bar-right:hover em{
+	opacity: 0.9;
+}
+.zixunList_ban ul{
+	width: 30vw;
+}
+.zixunList_ban ul li{
+	width: 100%;
+	background: url(../img/zixun/zixunList_libj.png) no-repeat left center;
+}
+.zixunList_ban ul li a{
+	display: block;
+	height: 4.2vw;
+	line-height: 4.2vw;
+	color: #333;
+	text-indent: 15px;
+	transition: 0.2s;
+}
+.zixunList_ban ul li:hover a{
+	color: #C40D2E;
+}
+.zixunList_list{
+	width: 95%;
+	margin: 0 2.5%;
+}
+.zixunList_list li{
+	margin: 3vw 0;
+}
+.zixunList_list li img{
+	width: 25vw;
+	height: 13vw;
+}
+.zixunList_list li div{
+	width: 65vw;
+	height: 13vw;
+	position: relative;
+}
+.zixunList_list li div h4{
+	font-size: 1.5vw;
+	line-height: 2.5;
+	color: #333;
+	transition: 0.2s;
+}
+.zixunList_list li div:hover h4{
+	color: #C40D2E;
+}
+.zixunList_list li div h6{
+	font-size: 1.2vw;
+	line-height: 2;
+	color: #333;
+}
+.zixunList_list li div p{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	text-align: right;
+	color: #999;
+}
+.zixun_more{
+	width: 150px;
+	height: 50px;
+	line-height: 40px;
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 10px;
+	background: #087cb3;
+	color: #fff;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: 0.2s;
+	display: block;
+	margin-bottom: 2vw;
+	font-size: 18px;
+}
+.zixun_more:hover{
+	opacity: 0.8;
+}
+.zixun_more:active{
+	transform: scale(0.95,0.95);
+}
+.zixunListcon{
+	width: 70%;
+	margin: 0 15%;
+}
+.zixunListcon h1{
+	text-align: center;
+	height: 6vw;
+	line-height: 6vw;
+	font-size: 2vw;
+}
+.zixunListcon p{
+	text-align: right;
+	font-size: 1.2vw;
+	height: 1.8vw;
+	line-height: 1.8vw;
+}
+.zixunListcon img{
+	width: 100%;
+	display: block;
+	margin-top: 5vw;
+}
+.zixunListcon h2{
+	font-size: 2vw;
+	text-align: center;
+	line-height: 8vw;
+	
+	color: #337fe6;
+}
+.zixunListcon h4{
+	color: #e8771d;
+	line-height: 3vw;
+	margin: 3vw 0;
+	font-size: 1.3vw;
+}
+.zixunListcon h5{
+	font-size: 1.2vw;
+	line-height: 1.5;
+}
+.zixunListcon h5 a{
+	color: #333;
+}
+.zixunListcon h6{
+	margin-bottom: 1vw;
 }

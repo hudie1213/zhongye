@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>中也科技</title>
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<link rel="icon" href="../favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/media.css" />
+		<link rel="stylesheet" type="text/css" href="../css/keyframes.css" />
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="../js/jquery_smoove.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<a name="header"></a>
+		<article class="zihead flex">
+			<a href="../index.html"><img src="../img/logo.png" /></a>
+			<ul class="zinav flex">
+				<li>
+					<a href="../index.html">&nbsp;&nbsp;首&nbsp;&nbsp;页&nbsp;&nbsp;</a>
+				</li>
+				<li>
+					<a href="anli.html">成功案例</a>
+				</li>
+				<li>
+					<a href="fa.html">解决方案</a>
+				</li>
+				<li>
+					<a href="jiaru.html">招商加盟</a>
+				</li>
+				<li>
+					<a href="http://www.zhongyekeji.com.cn">小程序制作</a>
+				</li>
+				<li>
+					<a href="#">关于中也</a>
+					<div>
+						<a href="zixun.html">新闻动态</a>
+						<a href="about.html">关于我们</a>
+					</div>
+				</li>
+			</ul>
+		</article>
+		<aside class="ce_nav">
+			<a href="#header"><img src="../img/jiaru/jia_aside.png" />
+				<p class="ce_navp">返回顶部</p>
+			</a>
+		</aside>
+		<aside class="allx">
+			<div style="width: 40px;height: 18px;background: #f00;font-size: 13px;margin-top:-1vw;cursor: pointer;text-align: center;line-height: 18px;color: #fff;" onclick="$('.allx').css('display','none')">关闭</div>
+			<h4>电话咨询</h4>
+			<p><img src="../img/tel.png" />13911811915</p>
+			<h4>微信咨询</h4>
+			<img src="../img/erwei.png" class="anlit_img" />
+		</aside>
+		<script type="text/javascript">
+			$(".ce_nav a").click(function() {
+				if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var $target = $(this.hash);
+					$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+					if($target.length) {
+						var targetOffset = $target.offset().top;
+						$('html,body').animate({ scrollTop: targetOffset }, 800);
+						return false;
+					}
+				}
+			});
+		</script>
+		<!--以上为头部-->
+		<article class="zixun_header">
+			<img src="../img/zixun/xinwen02_02.jpg" />
+		</article>
+		<article class="zixunList_con">
+			<h1>行业新闻</h1>
+			<div class="zixunList_ban flex">
+				<div class="zixun_banner">
+					<div class="banner">
+						<div class="b-img">
+							<a href="zixunListcon.html" style="background:url(../img/zixun/xinwen02_05.jpg) top center no-repeat;background-size:60vw 30vw ;"></a>
+							<a href="zixunListcon.html" style="background:url(../img/zixun/xinwen02_05.jpg) top center no-repeat;background-size:60vw 30vw ;"></a>
+							<a href="zixunListcon.html" style="background:url(../img/zixun/xinwen02_05.jpg) top center no-repeat;background-size:60vw 30vw ;"></a>
+						</div>
+						<div class="b-list"></div>
+						<div class="bar-left"><em></em></div>
+						<div class="bar-right">
+							<em></em>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+					n = 5;
+					$(function() {
+						var n = 0;
+						var imgLength = $(".b-img a").length;
+						var ctWidth = imgLength * 100;
+						var itemWidth = 1 / imgLength * 100;
+						$(".b-img").width(ctWidth + "%");
+						$(".b-img a").width(itemWidth + "%");
+						//						$(".b-list").width(imgLength * 30);
+						if(imgLength > 1) {
+							for(var i = 0; i < imgLength; i++) {
+								var listSpan = $("<span></span>")
+								$(".b-list").append(listSpan);
+							}
+						}
+						$(".b-list span:eq(0)").addClass("spcss").siblings("span").removeClass("spcss");
+						$(".bar-right em").click(function() {
+							if(n == imgLength - 1) {
+								var ctPosit = (n + 1) * 100;
+								$(".banner").append($(".b-img").clone());
+								$(".b-img:last").css("left", "100%");
+								$(".b-img:first").animate({ "left": "-" + ctPosit + "%" }, 1000);
+								$(".b-img:last").animate({ "left": "0" }, 1000);
+								var setTime0 = setTimeout(function() {
+									$(".banner .b-img:first").remove();
+								}, 1000);
+								n = 0;
+								$(".b-list span:eq(" + n + ")").addClass("spcss").siblings("span").removeClass("spcss");
+							} else {
+								n++;
+								var ctPosit = n * 100;
+								$(".b-img").animate({ "left": "-" + ctPosit + "%" }, 1000);
+								$(".b-list span:eq(" + n + ")").addClass("spcss").siblings("span").removeClass("spcss");
+							}
+						})
+						$(".bar-left em").click(function() {
+							if(n == 0) {
+								var stPosit = imgLength * 100;
+								var etPosit = (imgLength - 1) * 100;
+								$(".banner").prepend($(".b-img").clone());
+								$(".b-img:first").css("left", "-" + stPosit + "%");
+								$(".b-img:last").animate({ "left": "100%" }, 1000);
+								$(".b-img:first").animate({ "left": "-" + etPosit + "%" }, 1000);
+								var setTime0 = setTimeout(function() {
+									$(".banner .b-img:last").remove();
+								}, 1000);
+								n = imgLength - 1;
+								$(".b-list span:eq(" + n + ")").addClass("spcss").siblings("span").removeClass("spcss");
+							} else {
+								n--;
+								var ctPosit = n * 100;
+								$(".b-img").animate({ "left": "-" + ctPosit + "%" }, 1000);
+								$(".b-list span:eq(" + n + ")").addClass("spcss").siblings("span").removeClass("spcss");
+							}
+						})
+						$(".b-list span").click(function() {
+							var lsIndex = $(this).index();
+							n = lsIndex;
+							var ctPosit = n * 100;
+							$(".b-img").animate({ "left": "-" + ctPosit + "%" }, 1000);
+							$(this).addClass("spcss").siblings("span").removeClass("spcss");
+						})
+
+						function rollEnvent() {
+							if(n == imgLength - 1) {
+								var ctPosit = (n + 1) * 100;
+								$(".banner").append($(".b-img").clone());
+								$(".b-img:last").css("left", "100%");
+								$(".b-img:first").animate({ "left": "-" + ctPosit + "%" }, 1000);
+								$(".b-img:last").animate({ "left": "0" }, 1000);
+								var setTime0 = setTimeout(function() {
+									$(".banner .b-img:first").remove();
+								}, 1000);
+								n = 0;
+								$(".b-list span:eq(0)").addClass("spcss").siblings("span").removeClass("spcss");
+							} else {
+								n++;
+								var ctPosit = n * 100;
+								$(".b-img").animate({ "left": "-" + ctPosit + "%" }, 1000);
+								$(".b-list span:eq(" + n + ")").addClass("spcss").siblings("span").removeClass("spcss");
+							}
+						}
+						var slidesetInterval = setInterval(rollEnvent, 4000);
+						$(".banner").hover(function() { clearInterval(slidesetInterval); }, function() { slidesetInterval = setInterval(rollEnvent, 4000); });
+						$(".bar-left").mouseover(function() {
+							$(this).css("background", "url(images/arr-bg.png)");
+							$(this).find("em").addClass("emcss");
+						}).mouseleave(function() {
+							$(this).css("background", "none");
+							$(this).find("em").removeClass("emcss");
+						})
+						$(".bar-right").mouseover(function() {
+							$(this).css("background", "url(images/arr-bg.png)");
+							$(this).find("em").addClass("emcss");
+						}).mouseleave(function() {
+							$(this).css("background", "none");
+							$(this).find("em").removeClass("emcss");
+						})
+					})
+				</script>
+				<ul>
+					<li>
+						<a href="zixunListcon.html">2018年过半，微信小程序风口在哪</a>
+					</li>
+					<li>
+						<a href="zixunListcon.html">2018年过半，微信小程序风口在哪</a>
+					</li>
+					<li>
+						<a href="zixunListcon.html">2018年过半，微信小程序风口在哪</a>
+					</li>
+					<li>
+						<a href="zixunListcon.html">2018年过半，微信小程序风口在哪</a>
+					</li>
+					<li>
+						<a href="zixunListcon.html">2018年过半，微信小程序风口在哪</a>
+					</li>
+					<li>
+						<a href="zixunListcon.html">2018年过半，微信小程序风口在哪</a>
+					</li>
+					<li>
+						<a href="zixunListcon.html">2018年过半，微信小程序风口在哪</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="zixunList_list">
+			<ul>
+				<li><a href="zixunListcon.html" class="flex"><img src="../img/zixun/xinwen02_08.jpg" alt="" class="zixunList_listimg" /><div><h4>可爱小动物消消乐——动物涨姿势小程序测评</h4><h6>这里有超可爱的小动物  快把他们叠起来吧</h6><p>2018-7-28  19：35</p></div></a></li>
+				<li><a href="zixunListcon.html" class="flex"><img src="../img/zixun/xinwen02_11.jpg" alt="" class="zixunList_listimg" /><div><h4>可爱小动物消消乐——动物涨姿势小程序测评</h4><h6>这里有超可爱的小动物  快把他们叠起来吧</h6><p>2018-7-28  19：35</p></div></a></li>
+				<li><a href="zixunListcon.html" class="flex"><img src="../img/zixun/xinwen02_13.jpg" alt="" class="zixunList_listimg" /><div><h4>可爱小动物消消乐——动物涨姿势小程序测评</h4><h6>这里有超可爱的小动物  快把他们叠起来吧</h6><p>2018-7-28  19：35</p></div></a></li>
+			</ul>
+			<button class="zixun_more">加载更多</button>
+		</article>
+		<footer>
+			<div class="foot flex">
+				<ul>
+					<li>
+						<a href="fa.html">解决方案</a>
+					</li>
+					<li>
+						<a href="fa.html">公众号相关服务</a>
+					</li>
+					<li>
+						<a href="fa.html">通用版开发</a>
+					</li>
+					<li>
+						<a href="fa.html">定制版开发</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="fa.html">服务</a>
+					</li>
+					<li>
+						<a href="fa.html">服务内容</a>
+					</li>
+					<li>
+						<a href="fa.html">服务流程</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="anli.html">案例展示</a>
+					</li>
+					<li>
+						<a href="anli.html">通用版案例展示</a>
+					</li>
+					<li>
+						<a href="anli.html">定制版案例展示</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="jiaru.html">招商加盟</a>
+					</li>
+					<li>
+						<a href="jiaru.html">加盟流程</a>
+					</li>
+					<li>
+						<a href="jiaru.html">加盟条件</a>
+					</li>
+					<li>
+						<a href="jiaru.html">联系方式</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="about.html">关于我们</a>
+					</li>
+					<li>
+						<a href="about.html">公司简介</a>
+					</li>
+					<li>
+						<a href="about.html">服务品质</a>
+					</li>
+					<li>
+						<a href="about.html">联系我们</a>
+					</li>
+				</ul>
+			</div>
+			<p class="vw1_2">版权所有©2011-2018&nbsp;中也科技有限公司&nbsp;版权归中也科技所有盗用必究<br />中也科技整体互联网+解决方案专家&nbsp;&nbsp;&nbsp;&nbsp;京ICP备18024938号</p>
+		</footer>
+		
+		
+		
+
+	</body>
+
+</html>

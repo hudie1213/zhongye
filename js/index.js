@@ -23,9 +23,6 @@ $(document).ready(function() {
 	for(i = 0; i < $(".jrc").length; i++) {
 		jr.push($(".jrc").eq(i).offset().top);
 	}
-//	for(i in jr) {
-//		console.log(jr[i]);
-//	}
 	$(document).scroll(function() {
 		var top = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 		if(top < 300) {
@@ -70,4 +67,36 @@ $(document).ready(function() {
 			}
 		}
 	});
+	$(".sub").click(function() {
+		function isPoneAvailable(str) {
+			var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
+			if(!myreg.test(str)) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+
+		function isEmail(str) {
+			var myemail = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+			if(!myemail.test(str)) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+
+		if($("#name").val() == "" || ($("#name").val().length < 2 && $("#name").val().length > 5)) {
+			alert("请正确填写您的姓名！");
+			return false;
+		} else if(isPoneAvailable($("#tel").val()) == false) {
+			alert("请正确填写您的手机号码！");
+			return false;
+		} else if(isEmail($("#email").val()) == false) {
+			alert("请正确填写您的邮箱！");
+			return false;
+		}
+
+	})
+
 })
