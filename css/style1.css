@@ -258,12 +258,12 @@ header ul {
 }
 
 .flexnoend .hover {
-	background: #ee3808;
+	background: #f00;
 	border-radius: 0.8vw;
 }
 
 .flexnoend a:hover {
-	background: #ee3808;
+	background: #f00;
 	border-radius: 0.8vw;
 }
 
@@ -273,7 +273,7 @@ header ul {
 }
 
 .flexnoend li:hover>a {
-	background: #ee3808;
+	background: #F00;
 }
 
 .flexnoend li:hover div {
@@ -559,6 +559,7 @@ header ul {
 	cursor: default;
 }
 
+
 .sm_bj {
 	width: 100%;
 	height: 40vw;
@@ -594,7 +595,9 @@ header ul {
 	align-content: space-between;
 	flex-wrap: nowrap;
 }
-
+.sm_con_sj{
+	width: 25%;
+}
 .sm_con img:nth-child(1) {
 	width: 100%;
 	display: block;
@@ -776,7 +779,7 @@ header ul {
 	z-index: 1;
 	transition: 1s;
 	transform: rotate(-45deg);
-	/*animation: zhuan 2s paused linear;*/
+	animation: zhuan 2s paused linear;*/
 }
 
 .fa_con div:nth-child(1) div {
@@ -1371,9 +1374,7 @@ footer p {
 }
 
 .anliList_con {
-	width: 300%;
 	transition: 1s;
-	/*transform: translateX(100%);*/
 }
 
 .anliLi {
@@ -1392,16 +1393,11 @@ footer p {
 	cursor: pointer;
 	transition: 0.5s;
 	display: block;
-	max-height: 19vw;
+	max-height: 16vw;
 }
 
 .anliLi_img {
 	width: 100%;
-	overflow: hidden;
-}
-
-.anliLi_imgList {
-	width: 400%;
 	overflow: hidden;
 }
 
@@ -1437,7 +1433,7 @@ footer p {
 .anliLi_con:hover img {}
 
 .anliLi_liimg {
-	width: 25%;
+	width: 100%;
 	display: inline-block;
 	float: left;
 	transition: 0.2s;
@@ -1464,7 +1460,6 @@ footer p {
 }
 
 .anliSpan {
-	width: 18vw;
 	margin: 0 auto;
 }
 
@@ -1479,7 +1474,7 @@ footer p {
 	line-height: 3vw;
 	text-align: center;
 	transition: 0.2s;
-	margin-top: 4vw;
+	margin: 4vw auto 0;
 	cursor: pointer;
 }
 
@@ -1523,7 +1518,7 @@ footer p {
 #anlit .swiper-slide:after {
 	z-index: 1;
 	opacity: 0.3;
-	/*background: #000;*/
+	/*background: #000;
 	transition: opacity .4s ease-in-out;
 	position: absolute;
 	top: 0;
@@ -1917,6 +1912,19 @@ footer p {
 	width: 100%;
 }
 
+.meng {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+	display: none;
+	opacity: 0;
+	transition: 0.8s;
+}
+
 .about_header img {
 	width: 100%;
 	display: block;
@@ -2087,19 +2095,6 @@ footer p {
 	line-height: 1.3;
 }
 
-.meng {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	background: rgba(0, 0, 0, 0.5);
-	z-index: 1;
-	display: none;
-	opacity: 0;
-	transition: 0.8s;
-}
-
 .about_need {
 	width: 75%;
 	padding: 1vw 2vw;
@@ -2112,7 +2107,7 @@ footer p {
 	overflow: hidden;
 	transition: 0.8s;
 	transform: scale(0, 0);
-	z-index: 2;
+	z-index: 10000;
 }
 
 .about_need1 {
@@ -2888,7 +2883,19 @@ footer p {
 	color: #333;
 }
 
-.zixunList_list li div p {
+.zixunList_list li div h6 p,
+.zixunList_list li div h1,
+.zixunList_list li div h2,
+.zixunList_list li div h3,
+.zixunList_list li div h5 {
+	position: relative;
+	left: 0;
+	top: 0;
+	text-align: left;
+	color: #333;
+}
+
+.zixunList_list li div>p {
 	position: absolute;
 	right: 0;
 	bottom: 0;

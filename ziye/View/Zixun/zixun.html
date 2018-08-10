@@ -1,0 +1,155 @@
+<include file="Public/header" />
+<!--以上为头部-->
+<article class="zixun_header">
+	<img src="<{$list.picture}>" />
+</article>
+
+<article class="zixun_con">
+	<ul class="flex zixun_con_ul">
+		<li>
+			<a href="zixunList.html?id=1">
+				<img src="__PUBLIC__/Home/img/zixun/xinwen01_05.jpg" />
+			</a>
+			<ul>
+				<foreach name="list1" item="v">
+					<li>
+						<a href="zixunListcon.html?id=<{$v.id}>">
+							<p>
+								<{$v.name}>
+							</p>
+							<span>
+								<{$v.add|date="Y-m-d" ,###}>
+							</span>
+						</a>
+					</li>
+				</foreach>
+				
+			</ul>
+			<ul>
+				<foreach name="list2" item="v">
+					<li>
+						<a href="zixunListcon.html?id=<{$v.id}>">
+							<p>
+								<{$v.name}>
+							</p>
+							<span>
+								<{$v.add|date="Y-m-d" ,###}>
+							</span>
+						</a>
+					</li>
+				</foreach>
+				
+			</ul>
+		</li>
+		<li>
+			<a href="zixunList.html?id=2">
+				<img src="__PUBLIC__/Home/img/zixun/xinwen01_06.jpg" />
+			</a>
+			<ul>
+				<foreach name="list3" item="v">
+					<li>
+						<a href="zixunListcon.html?id=<{$v.id}>">
+							<p>
+								<{$v.name}>
+							</p>
+							<span>
+								<{$v.add|date="Y-m-d" ,###}>
+							</span>
+						</a>
+					</li>
+				</foreach>
+				
+			</ul>
+			<ul>
+				<foreach name="list4" item="v">
+					<li>
+						<a href="zixunListcon.html?id=<{$v.id}>">
+							<p>
+								<{$v.name}>
+							</p>
+							<span>
+								<{$v.add|date="Y-m-d" ,###}>
+							</span>
+						</a>
+					</li>
+				</foreach>
+				
+			</ul>
+		</li>
+		<li>
+			<a href="zixunList.html?id=3">
+				<img src="__PUBLIC__/Home/img/zixun/xinwen01_08.jpg" />
+			</a>
+			<ul>
+				<foreach name="list5" item="v">
+					<li>
+						<a href="zixunListcon.html?id=<{$v.id}>">
+							<p>
+								<{$v.name}>
+							</p>
+							<span>
+								<{$v.add|date="Y-m-d" ,###}>
+							</span>
+						</a>
+					</li>
+				</foreach>
+				
+			</ul>
+			<ul>
+				<foreach name="list6" item="v">
+					<li>
+						<a href="zixunListcon.html?id=<{$v.id}>">
+							<p>
+								<{$v.name}>
+							</p>
+							<span>
+								<{$v.add|date="Y-m-d" ,###}>
+							</span>
+						</a>
+					</li>
+				</foreach>
+				
+			</ul>
+		</li>
+	</ul>
+	<a href="javascript:;" class="xwmores">更多新闻</a>
+</article>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".xwmores").click(function () {
+			$.post("__ACTION__", {
+				length: $(".zixun_con_ul li").find("ul").length * 5,
+			}, function (result) {
+				// console.log(eval(result));
+				console.log(eval(result));
+				
+				
+				var data=eval(result);
+				var a="<li><a href='zixunListcon.html?id=";
+				var b="'><p>";
+				var c="</p><span>";
+				var d="</span></a></li>";
+				$(".zixun_con_ul>li").eq(0).append("<ul></ul>");
+				$(".zixun_con_ul>li").eq(1).append("<ul></ul>");
+				$(".zixun_con_ul>li").eq(2).append("<ul></ul>");
+				for(i=0;i<5;i++){				
+					$(".zixun_con_ul>li").eq(0).children("ul:last").append(a+data[i].id+b+data[i].name+c+data[i].add+d);
+				}
+				for(i=5;i<10;i++){
+					$(".zixun_con_ul>li").eq(1).children("ul:last").append(a+data[i].id+b+data[i].name+c+data[i].add+d);
+				}
+				for(i=10;i<15;i++){
+					$(".zixun_con_ul>li").eq(2).children("ul:last").append(a+data[i].id+b+data[i].name+c+data[i].add+d);
+				}
+			});
+		})
+	})
+</script>
+<include file="Public/footer" />
+
+<script defer="" type="text/javascript">
+	n = 5;
+</script>
+</body>
+
+</html>

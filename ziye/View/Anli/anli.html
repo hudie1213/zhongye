@@ -1,0 +1,139 @@
+<include file="Public/header" />
+<!--以上为头部-->
+
+<article class="anliban">
+	<img src="<{$list.picture}>" />
+</article>
+<div style="width: 100%;height: 1px;background: #ddd;margin-top: 2.5vw;"></div>
+<article class="anlicon">
+	<h1 class="tit">通用版案例</h1>
+	<h6>General edition case</h6>
+	<div style="width: 100%;height: 1px;background: #ccc;margin: 5vw 0 2.5vw;"></div>
+	<div id="anlit" class="swiper-container">
+
+		<div class="swiper-wrapper">
+			<foreach name="lists" item="v">
+				<div class="swiper-slide">
+					<img src="<{$v.picture}>" />
+
+				</div>
+			</foreach>
+
+		</div>
+	</div>
+
+	<script src="__PUBLIC__/Home/js/swiper.min.js"></script>
+
+</article>
+<div style="width: 100%;height: 1px;background: #ddd;margin-top: 1.5vw;"></div>
+<article class="anlishow">
+	<h2 class="tit">案例展示</h2>
+	<p>Case study</p>
+	<!--循环，三个列表，调用三次查询输出包含图片-->
+	<div class="anliList">
+		<div style="width: 100%;height: 1px;background: #ddd;position: relative;top: 0;margin-bottom: 0.5vw;"></div>
+		<div class="anliList_con flex">
+			<div class="anliLi flex">
+				
+			</div>
+
+		</div>
+		<div class="anliSpan flex">
+
+		</div>
+	</div>
+</article>
+<include file="Public/footer" />
+<script defer>
+	// console.log($(".anliLi").length);
+	$.post("__ACTION__", {
+		id: 1
+	}, function (data) {
+		console.log(eval(data))
+		var Data = eval(data);
+		var al = 1;
+
+		var almax = Math.ceil(Data.length / 18);
+		$(".anliList_con").width(almax + "00%");
+		$(".anliSpan").width((almax*1.5*3)+"vw");
+		
+		for (i = 1; i < almax; i++) {
+			$(".anliList_con").append("<div class='anliLi flex'></div>")
+		}
+		for (i = 1; i < almax + 1; i++) {
+			$(".anliSpan").append("<span>" + i + "</span>");
+		}
+		for(i=0;i<18;i++){
+			if(i<Data.length){
+			$(".anliLi").eq(0).append("<div class='anliLi_con'><img src='"+eval(data)[i].qrcode+"' class='anlierwei' /><div class='anliLi_cont'><div class='anliLi_img'><div class='anliLi_imgList'><img src='"+eval(data)[i].picture+"' class='anliLi_liimg' /></div></div><h6>"+eval(data)[i].name+"</h6><p>"+eval(data)[i].type+"</p></div></div>");}
+		}
+		for(i=18;i<36;i++){
+			if(i<Data.length){
+				$(".anliLi").eq(1).append("<div class='anliLi_con'><img src='"+eval(data)[i].qrcode+"' class='anlierwei' /><div class='anliLi_cont'><div class='anliLi_img'><div class='anliLi_imgList'><img src='"+eval(data)[i].picture+"' class='anliLi_liimg' /></div></div><h6>"+eval(data)[i].name+"</h6><p>"+eval(data)[i].type+"</p></div></div>");
+			}
+		}
+		for(i=36;i<54;i++){
+			if(i<Data.length){
+				$(".anliLi").eq(2).append("<div class='anliLi_con'><img src='"+eval(data)[i].qrcode+"' class='anlierwei' /><div class='anliLi_cont'><div class='anliLi_img'><div class='anliLi_imgList'><img src='"+eval(data)[i].picture+"' class='anliLi_liimg' /></div></div><h6>"+eval(data)[i].name+"</h6><p>"+eval(data)[i].type+"</p></div></div>");
+			}
+		}
+		for(i=54;i<72;i++){
+			if(i<Data.length){
+				$(".anliLi").eq(3).append("<div class='anliLi_con'><img src='"+eval(data)[i].qrcode+"' class='anlierwei' /><div class='anliLi_cont'><div class='anliLi_img'><div class='anliLi_imgList'><img src='"+eval(data)[i].picture+"' class='anliLi_liimg' /></div></div><h6>"+eval(data)[i].name+"</h6><p>"+eval(data)[i].type+"</p></div></div>");
+			}
+		}
+		for(i=72;i<90;i++){
+			if(i<Data.length){
+				$(".anliLi").eq(4).append("<div class='anliLi_con'><img src='"+eval(data)[i].qrcode+"' class='anlierwei' /><div class='anliLi_cont'><div class='anliLi_img'><div class='anliLi_imgList'><img src='"+eval(data)[i].picture+"' class='anliLi_liimg' /></div></div><h6>"+eval(data)[i].name+"</h6><p>"+eval(data)[i].type+"</p></div></div>");
+			}
+		}
+		$(".anliSpan span").eq(0).addClass("anliSpanh").siblings().removeClass("anliSpanh");
+
+		function anliroll() {
+			if(almax>1){
+				$(".anliSpan span").eq(al).addClass("anliSpanh").siblings().removeClass("anliSpanh");
+				var alt = al * (100 / almax);
+				$(".anliList_con").css("transform", "translateX(-" + alt + "%)");
+				if (al == almax - 1) {
+					al = -1;
+				}
+				al++;
+			}
+			
+		}
+		var anliTime1 = setInterval(anliroll, 4000);
+		$(".anliSpan span").click(function () {
+			var index = $(this).index();
+			var alt = (index * (100 / almax));
+			$(this).addClass("anliSpanh").siblings().removeClass("anliSpanh");
+			$(".anliList_con").css("transform", "translateX(-" + alt + "%)");
+			clearInterval(anliTime1);
+			al = index;
+			anliTime1 = setInterval(anliroll, 4000)
+		})
+		$(".anliList_con").hover(function () {
+			clearInterval(anliTime1);
+		}, function () {
+			anliTime1 = setInterval(anliroll, 4000)
+		})
+	})
+
+
+
+
+
+
+
+
+
+
+	var n = 1;
+	var ydSwiper = new Swiper('#anlit', {
+		centeredSlides: true,
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+	})
+</script>
+</body>
+
+</html>

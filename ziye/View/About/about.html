@@ -1,0 +1,130 @@
+<include file="Public/header" />
+<!--以上为头部-->
+<article class="about_header">
+	<img src="__PUBLIC__/Home/img/about/guanyu01_02.jpg" />
+	<div class="about_header_con" style="top: 15vw;">
+		<img src="<{$list.picture}>" />
+		<p class="vw1_5">中也者，天下之大本也
+			<br />The great world of China is also</p>
+	</div>
+</article>
+
+<article class="about_con">
+	<h1 class="about_tit tit">关于我们</h1>
+	<h6 class="about_desc vw1_2">
+		<{$lists[ 'abstract']|html_entity_decode}>
+	</h6>
+	<{$lists[ 'introduce']|html_entity_decode}>
+</article>
+<article class="about_show">
+	<img src="__PUBLIC__/Home/img/about/about_showbj.png" />
+	<div class="flex about_show_con">
+		<div class="about_show_cont ">
+			<div style="width: 100%;height: 100%;background: rgba(255,255,255,0.5);position: absolute;z-index: 1;"></div>
+			<img src="__PUBLIC__/Home/img/about/about_show_icon1.png" />
+			<h6>业务范围：</h6>
+			<{$lists[ 'service']|html_entity_decode}>
+		</div>
+		<div class="about_show_cont ">
+			<div style="width: 100%;height: 100%;background: rgba(255,255,255,0.5);position: absolute;"></div>
+			<img src="__PUBLIC__/Home/img/about/about_show_icon2.png" />
+			<h6>中也科技企业文化：</h6>
+			<{$lists[ 'culture']|html_entity_decode}>
+		</div>
+	</div>
+</article>
+<article class="about_add">
+	<h2 class="tit">加入我们</h2>
+	<ul class="flex">
+		<foreach name="list1" item="v">
+			<li>
+				<img src="<{$v.picture}>" />
+				<h6>
+					<{$v.name}>
+				</h6>
+				<p class="job_shou1 job_shou">职位要求</p>
+				<div class="about_need about_need1">
+					<img src="__PUBLIC__/Home/img/about/close.png" class="about_close about_close1" />
+					<h6>岗位职责</h6>
+					<{$v.duty|html_entity_decode}>
+						<h6>任职要求：</h6>
+						<{$v.require|html_entity_decode}>
+				</div>
+				<div class="meng"></div>
+			</li>
+		</foreach>
+	</ul>
+	<h5 class="vw1_5">发送简历到邮箱13051353789@139.com
+		<br />我们会主动联系您</h5>
+</article>
+
+<include file="Public/footer" />
+
+<script defer type="text/javascript">
+	n = 5;
+	$(document).ready(function () {
+		var top;
+		var aboutLeft = new Array("-30%", "-5%", "12.5%", "30%", "50%");
+		var winHei = $(window).height();
+		var targetOffset1 = $(".about_show").offset().top;
+		$(document).scroll(function () {
+			top = $(document).scrollTop();
+			if ((top + (0.7 * winHei)) > targetOffset1) {
+				$(".about_show_cont").css({
+					"transform": "translateX(0)",
+					"opacity": "1"
+				});
+			}
+		})
+		var a, b, c;
+		$(".job_shou").click(function (e) {
+			a = e.timeStamp;
+			console.log($(".about_need").length);
+			var i = $(this).parent().index();
+			$(".about_need").eq(i).css("display", "block");
+			$(".meng").eq(i).css("display", "block");
+			$(".about_need").eq(i).css({
+				"opacity": "1",
+				"transform": "scale(1,1)",
+				"left": "12.5%"
+			});
+
+			$(".meng").eq(i).animate({
+				"opacity": "1"
+			}, 0);
+		})
+		$(".meng").click(function (e) {
+			b = e.timeStamp;
+			if (b - 800 > a) {
+				var i = $(this).parent().index();
+				$(".about_need").eq(i).css({
+					"opacity": "0",
+					"transform": "scale(0,0)",
+					"left": aboutLeft[i]
+				});
+				$(".meng").css("opacity", "0");
+				setTimeout(function () {
+					$(".meng").css("display", "none");
+				}, 800)
+			}
+		})
+		$(".about_close").click(function (e) {
+			c = e.timeStamp;
+			if (c - 800 > a) {
+				var i = $(this).parent().parent().index();
+				$(".about_need").eq(i).css({
+					"opacity": "0",
+					"transform": "scale(0,0)",
+					"left": aboutLeft[i]
+				});
+				$(".meng").css("opacity", "0");
+				setTimeout(function () {
+					$(".meng").css("display", "none");
+				}, 800)
+			}
+		})
+	})
+</script>
+</body>
+
+</html>

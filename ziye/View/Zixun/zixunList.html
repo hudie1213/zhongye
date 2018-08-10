@@ -1,90 +1,22 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>中也科技</title>
-		<meta name="Keywords" content="" />
-		<meta name="Description" content="" />
-		<link rel="icon" href="../favicon.ico" />
-		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
-		<link rel="stylesheet" type="text/css" href="../css/style.css" />
-		<link rel="stylesheet" type="text/css" href="../css/media.css" />
-		<link rel="stylesheet" type="text/css" href="../css/keyframes.css" />
-		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="../js/jquery_smoove.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
-	</head>
-
-	<body>
-		<a name="header"></a>
-		<article class="zihead flex">
-			<a href="../index.html"><img src="../img/logo.png" /></a>
-			<ul class="zinav flex">
-				<li>
-					<a href="../index.html">&nbsp;首&nbsp;页&nbsp;</a>
-				</li>
-				<li>
-					<a href="anli.html">成功案例</a>
-				</li>
-				<li>
-					<a href="fa.html">解决方案</a>
-				</li>
-				<li>
-					<a href="jiaru.html">招商加盟</a>
-				</li>
-				<li>
-					<a href="http://www.zhongyekeji.com.cn">小程序制作</a>
-				</li>
-				<li>
-					<a href="#">关于中也</a>
-					<div>
-						<a href="zixun.html">新闻动态</a>
-						<a href="about.html">关于我们</a>
-					</div>
-				</li>
-			</ul>
-		</article>
-		<aside class="ce_nav">
-			<a href="#header"><img src="../img/jiaru/jia_aside.png" />
-				<p class="ce_navp">返回顶部</p>
-			</a>
-		</aside>
-		<aside class="allx">
-			<div style="width: 40px;height: 18px;background: #f00;font-size: 13px;margin-top:-1vw;cursor: pointer;text-align: center;line-height: 18px;color: #fff;" onclick="$('.allx').css('display','none')">关闭</div>
-			<h4>电话咨询</h4>
-			<p><img src="../img/tel.png" />13911811915</p>
-			<h4>微信咨询</h4>
-			<img src="../img/erwei.png" class="anlit_img" />
-		</aside>
-		<script type="text/javascript">
-			$(".ce_nav a").click(function() {
-				if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-					var $target = $(this.hash);
-					$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
-					if($target.length) {
-						var targetOffset = $target.offset().top;
-						$('html,body').animate({ scrollTop: targetOffset }, 800);
-						return false;
-					}
-				}
-			});
-		</script>
+<include file="Public/header"/>
 		<!--以上为头部-->
 		<article class="zixun_header">
-			<img src="../img/zixun/xinwen02_02.jpg" />
+			<img src="<{$list.picture}>" />
 		</article>
 		<article class="zixunList_con">
 			<!--标题和内容改，布局样式都一样-->
-			<h1>行业新闻</h1>
+			<h1>
+			<if condition="$Think.get.id eq 1">行业新闻</if>
+			<if condition="$Think.get.id eq 2">热点资讯</if>
+			<if condition="$Think.get.id eq 3">小程序新闻</if>
+			</h1>
 			<div class="zixunList_ban flex">
 				<div class="zixun_banner">
 					<div class="banner">
 						<div class="b-img">
-							<a href="zixunListcon.html" style="background:url(../img/zixun/xinwen02_05.jpg) top center no-repeat;background-size:60vw 30vw ;"></a>
-							<a href="zixunListcon.html" style="background:url(../img/zixun/xinwen02_05.jpg) top center no-repeat;background-size:60vw 30vw ;"></a>
-							<a href="zixunListcon.html" style="background:url(../img/zixun/xinwen02_05.jpg) top center no-repeat;background-size:60vw 30vw ;"></a>
+						<foreach name="list1" item="v">
+							<a href="zixunListcon.html?id=<{$v.id}>" style="background:url(<{$v.picture}>) top center no-repeat;background-size:60vw 30vw ;"></a>
+						</foreach>
 						</div>
 						<div class="b-list"></div>
 						<div class="bar-left"><em></em></div>
@@ -195,7 +127,12 @@
 					})
 				</script>
 				<ul>
+				<foreach name="list2" item="v">
 					<li>
+						<a href="zixunListcon.html?id=<{$v.id}>"><{$v.name}></a>
+					</li>
+				</foreach>
+					<!-- <li>
 						<a href="zixunListcon.html">2018年过半，微信小程序风口在哪</a>
 					</li>
 					<li>
@@ -212,17 +149,25 @@
 					</li>
 					<li>
 						<a href="zixunListcon.html">2018年过半，微信小程序风口在哪</a>
-					</li>
-					<li>
-						<a href="zixunListcon.html">2018年过半，微信小程序风口在哪</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</article>
 		<article class="zixunList_list">
 			<ul>
+			<foreach name="list3" item="v" class="asdd">
 				<li>
-					<a href="zixunListcon.html" class="flex"><img src="../img/zixun/xinwen02_08.jpg" alt="" class="zixunList_listimg" />
+					<a href="zixunListcon.html?id=<{$v.id}>" class="flex"><img src="<{$v.picture}>" alt="" class="zixunList_listimg" />
+						<div>
+							<h4><{$v.name}></h4>
+							<h6><{$v.content|html_entity_decode|mb_substr=0,31}></h6>
+							<p><{$v.add|date="Y-m-d H:i",###}></p>
+						</div>
+					</a>
+				</li>
+			</foreach>
+				<!-- <li>
+					<a href="zixunListcon.html" class="flex"><img src="__PUBLIC__/Home/img/zixun/xinwen02_11.jpg" alt="" class="zixunList_listimg" />
 						<div>
 							<h4>可爱小动物消消乐——动物涨姿势小程序测评</h4>
 							<h6>这里有超可爱的小动物  快把他们叠起来吧</h6>
@@ -231,106 +176,44 @@
 					</a>
 				</li>
 				<li>
-					<a href="zixunListcon.html" class="flex"><img src="../img/zixun/xinwen02_11.jpg" alt="" class="zixunList_listimg" />
+					<a href="zixunListcon.html" class="flex"><img src="__PUBLIC__/Home/img/zixun/xinwen02_13.jpg" alt="" class="zixunList_listimg" />
 						<div>
 							<h4>可爱小动物消消乐——动物涨姿势小程序测评</h4>
 							<h6>这里有超可爱的小动物  快把他们叠起来吧</h6>
 							<p>2018-7-28 19：35</p>
 						</div>
 					</a>
-				</li>
-				<li>
-					<a href="zixunListcon.html" class="flex"><img src="../img/zixun/xinwen02_13.jpg" alt="" class="zixunList_listimg" />
-						<div>
-							<h4>可爱小动物消消乐——动物涨姿势小程序测评</h4>
-							<h6>这里有超可爱的小动物  快把他们叠起来吧</h6>
-							<p>2018-7-28 19：35</p>
-						</div>
-					</a>
-				</li>
+				</li> -->
 			</ul>
+			<script>
+				console.log();
+			</script>
 			<button class="zixun_more">加载更多</button>
 		</article>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				var listli = "<li><a href='zixunListcon.html' class='flex'><img src='../img/zixun/xinwen02_08.jpg' alt='' class='zixunList_listimg' /><div><h4>可爱小动物消消乐——动物涨姿势小程序测评</h4><h6>这里有超可爱的小动物  快把他们叠起来吧</h6><p>2018-7-28  19：35</p></div></a></li>";
 				$(".zixun_more").click(function() {
-					for(i = 0; i < 3; i++) {
-						$(".zixunList_list ul").append(listli);
-					}
-
+					$.post("__ACTION__",{limit:$(".zixunList_list li").length,id:"<{$Think.get.id}>"},function(result){
+						console.log(result);
+						// console.log(eval(result)[0]);
+						//console.log(eval(result)[0].id);
+						var condata=eval(result);
+						// var listart="<li><a href='zixunListcon.html?id="+eval(result)[i].id+"' class='flex'><img src='"+eval(result)[i].picture+"' alt='' class='zixunList_listimg' /><div><h4><"+eval(result)[i].name+"></h4><h6><"+eval(result)[i].content+"></h6><p><"+eval(result)[i].add+"></p></div></a></li>";
+// 						var a="<li><a href='zixunListcon.html?id=";
+// 						var b="' class='flex'><img src='";
+// 						var c="' alt='' class='zixunList_listimg' /><div><h4><";
+// 						var d="></h4><h6><";
+// 						var e="></h6><p><";
+// 						var f="></p></div></a></li>";
+ 						for(var i=0;i<condata.length;i++){
+							$(".zixunList_list ul").append("<li><a href='zixunListcon.html?id="+eval(result)[i].id+"' class='flex'><img src='"+eval(result)[i].picture+"' alt='' class='zixunList_listimg' /><div><h4>"+eval(result)[i].name+"</h4><h6>"+eval(result)[i].content+"</h6><p>"+eval(result)[i].add+"</p></div></a></li>");
+ 						}
+						
+					});
 				})
 			})
 		</script>
-		<footer>
-			<div class="foot flex">
-				<ul>
-					<li>
-						<a href="fa.html">解决方案</a>
-					</li>
-					<li>
-						<a href="fa.html">公众号相关服务</a>
-					</li>
-					<li>
-						<a href="fa.html">通用版开发</a>
-					</li>
-					<li>
-						<a href="fa.html">定制版开发</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a href="fa.html">服务</a>
-					</li>
-					<li>
-						<a href="fa.html">服务内容</a>
-					</li>
-					<li>
-						<a href="fa.html">服务流程</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a href="anli.html">案例展示</a>
-					</li>
-					<li>
-						<a href="anli.html">通用版案例展示</a>
-					</li>
-					<li>
-						<a href="anli.html">定制版案例展示</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a href="jiaru.html">招商加盟</a>
-					</li>
-					<li>
-						<a href="jiaru.html">加盟流程</a>
-					</li>
-					<li>
-						<a href="jiaru.html">加盟条件</a>
-					</li>
-					<li>
-						<a href="jiaru.html">联系方式</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a href="about.html">关于我们</a>
-					</li>
-					<li>
-						<a href="about.html">公司简介</a>
-					</li>
-					<li>
-						<a href="about.html">服务品质</a>
-					</li>
-					<li>
-						<a href="about.html">联系我们</a>
-					</li>
-				</ul>
-			</div>
-			<p class="vw1_2">版权所有©2011-2018&nbsp;中也科技有限公司&nbsp;版权归中也科技所有盗用必究<br />中也科技整体互联网+解决方案专家&nbsp;&nbsp;&nbsp;&nbsp;京ICP备18024938号</p>
-		</footer>
+		<include file="Public/footer"/>
 
 	</body>
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>中也科技</title>
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<link rel="icon" href="__PUBLIC__/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/media.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/keyframes.css" />
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="__PUBLIC__/Home/js/jquery_smoove.js" type="text/javascript" charset="utf-8"></script>
+		<script defer src="__PUBLIC__/Home/js/js.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<a name="header"></a>
+		<article class="zihead flex">
+			<a href="__MODULE__"><img src="__PUBLIC__/Home/img/logo.png" /></a>
+			<ul class="zinav flex">
+				<li>
+					<a href="__MODULE__">首&nbsp;&nbsp;页</a>
+				</li>
+				<li>
+					<a href="__MODULE__/Anli/anli.html">成功案例</a>
+				</li>
+				<li>
+					<a href="__MODULE__/Fa/fa.html">解决方案</a>
+				</li>
+				<li>
+					<a href="__MODULE__/Jiaru/jiaru.html">招商加盟</a>
+				</li>
+				<li>
+					<a href="http://www.zhongyekeji.com.cn">小程序制作</a>
+				</li>
+				<li>
+					<a href="#">关于中也</a>
+					<div>
+						<a href="__MODULE__/Zixun/zixun.html">新闻动态</a>
+						<a href="__MODULE__/About/about.html">关于我们</a>
+					</div>
+				</li>
+			</ul>
+		</article>
+		<aside class="ce_nav">
+			<a href="#header"><img src="__PUBLIC__/Home/img/jiaru/jia_aside.png" />
+				<p class="ce_navp">返回顶部</p>
+			</a>
+		</aside>
+		<script type="text/javascript">
+			$(".ce_nav a").click(function() {
+				if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var $target = $(this.hash);
+					$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+					if($target.length) {
+						var targetOffset = $target.offset().top;
+						$('html,body').animate({ scrollTop: targetOffset }, 800);
+						return false;
+					}
+				}
+			});
+		</script>
+		<aside class="allx as">
+	<div style='width: 40px;height: 18px;background: #f00;font-size: 13px;margin-top:-1vw;cursor: pointer;text-align: center;line-height: 18px;color: #fff;'>隐藏</div>
+	<div>
+		<h4>电话咨询</h4>
+		<p><img src='__PUBLIC__/Home/img/tel.png' />13911811915</p>
+		<h4>微信咨询</h4><img src='__PUBLIC__/Home/img/erwei.png' class='anlit_img' />
+	</div>
+</aside>
+<aside class="allx al">
+
+	<h6>联系我们</h6>
+</aside>
+<script type="text/javascript">
+	$(".al").css("display", "none");
+	$(".as").children().eq(0).click(function() {
+		$(".as").css("opacity", "0");
+		$(".al").css("opacity", "0");
+		setTimeout(function() {
+			$(".as").css("display", "none");
+		}, 300)
+		$(".al").css({ "width": "3vw", "display": "block" });
+		setTimeout(function() {
+			$(".al").css("opacity", "1");
+		}, 300)
+
+	})
+	$(".al").children().eq(0).click(function() {
+		$(".al").css("opacity", "0");
+		$(".as").css("opacity", "0");
+		setTimeout(function() {
+			$(".al").css("display", "none");
+		}, 300)
+		$(".as").css("display", "block");
+		setTimeout(function() {
+			$(".as").css("opacity", "1");
+		}, 300)
+
+	})
+</script>

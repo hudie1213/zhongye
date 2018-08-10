@@ -1,83 +1,11 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>中也科技</title>
-		<meta name="Keywords" content="" />
-		<meta name="Description" content="" />
-		<link rel="icon" href="../favicon.ico" />
-		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
-		<link rel="stylesheet" type="text/css" href="../css/style.css" />
-		<link rel="stylesheet" type="text/css" href="../css/media.css" />
-		<link rel="stylesheet" type="text/css" href="../css/keyframes.css" />
-		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script defer src="../js/js.js" type="text/javascript" charset="utf-8"></script>
-
-	</head>
-
-	<body>
-		<a name="header"></a>
-		<article class="zihead flex">
-			<a href="../index.html"><img src="../img/logo.png" /></a>
-			<ul class="zinav flex">
-				<li>
-					<a href="../index.html">&nbsp;首&nbsp;页&nbsp;</a>
-				</li>
-				<li>
-					<a href="anli.html">成功案例</a>
-				</li>
-				<li>
-					<a href="fa.html">解决方案</a>
-				</li>
-				<li>
-					<a href="jiaru.html">招商加盟</a>
-				</li>
-				<li>
-					<a href="http://www.zhongyekeji.com.cn">小程序制作</a>
-				</li>
-				<li>
-					<a href="#">关于中也</a>
-					<div>
-						<a href="zixun.html">新闻动态</a>
-						<a href="about.html">关于我们</a>
-					</div>
-				</li>
-			</ul>
-		</article>
-		<aside class="ce_nav">
-			<a href="#header"><img src="../img/jiaru/jia_aside.png" />
-				<p class="ce_navp">返回顶部</p>
-			</a>
-		</aside>
-		<aside class="allx">
-			<div style="width: 40px;height: 18px;background: #f00;font-size: 13px;margin-top:-1vw;cursor: pointer;text-align: center;line-height: 18px;color: #fff;" onclick="$('.allx').css('display','none')">关闭</div>
-			<h4>电话咨询</h4>
-			<p><img src="../img/tel.png" />13911811915</p>
-			<h4>微信咨询</h4>
-			<img src="../img/erwei.png" class="anlit_img" />
-		</aside>
-		<script type="text/javascript">
-			$(".ce_nav a").click(function() {
-				if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-					var $target = $(this.hash);
-					$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
-					if($target.length) {
-						var targetOffset = $target.offset().top;
-						$('html,body').animate({ scrollTop: targetOffset }, 800);
-						return false;
-					}
-				}
-			});
-		</script>
+<include file="Public/header"/>
 		<!--以上为头部-->
 		<aside class="allx">
 			<div style="width: 40px;height: 18px;background: #f00;font-size: 13px;margin-top:-1vw;cursor: pointer;text-align: center;line-height: 18px;color: #fff;" onclick="$('.allx').css('display','none')">关闭</div>
 			<h4>电话咨询</h4>
-			<p><img src="../img/tel.png" />13911811915</p>
+			<p><img src="__PUBLIC__/Home/img/tel.png" />13911811915</p>
 			<h4>微信咨询</h4>
-			<img src="../img/erwei.png" class="anlit_img" />
+			<img src="__PUBLIC__/Home/img/erwei.png" class="anlit_img" />
 		</aside>
 
 		<article class="jia_ban">
@@ -100,22 +28,22 @@
 			<h1 class="jiatit tit">加盟中也科技的前景</h1>
 			<div class="underline"></div>
 			<div class="jia_qj_con">
-				<img src="../img/jiaru/jiaru_1.jpg" />
+				<img src="<{$list.picture}>" />
 				<ul>
 					<li>
-						OEM模式，做自己的品牌
+						<{$list.one|html_entity_decode}>
 					</li>
 					<li>
-						海量模板，自由组合，随心搭配，满足更多客户需求的搭配
+						<{$list.two|html_entity_decode}>
 					</li>
 					<li>
-						操作简单，300秒生成自己的
+						<{$list.three|html_entity_decode}>
 					</li>
 					<li>
-						模块自定义首页，页面多样化，满足视觉差异化需求
+						<{$list.four|html_entity_decode}>
 					</li>
 					<li>
-						会员卡、优惠券、满减、砍价、秒杀、首单立减...营销手段丰富
+						<{$list.five|html_entity_decode}>
 					</li>
 				</ul>
 			</div>
@@ -126,44 +54,44 @@
 			<h2 class="jiatit tit color_con">合作支持</h2>
 			<div class="underline"></div>
 			<ul class="flex">
+			<foreach name="lists" item="v">
 				<li>
-					<img src="../img/jiaru/jiaru_zc1.jpg" />
-					<h6>技术支持</h6>
-					<p>专业技术对接</p>
-					<p>疑难问题处理</p>
-					<p>一键需求整合开发</p>
+					<img src="<{$v.picture}>" />
+					<h6><{$v.type}></h6>
+					<{$v.content|html_entity_decode}>
 				</li>
-				<li>
-					<img src="../img/jiaru/jiaru_zc2.jpg" />
+			</foreach>
+				<!-- <li>
+					<img src="__PUBLIC__/Home/img/jiaru/jiaru_zc2.jpg" />
 					<h6>物料支持</h6>
 					<p>宣传折页/视频</p>
 					<p>海报产品/手册</p>
 				</li>
 				<li>
-					<img src="../img/jiaru/jiaru_zc3.jpg" />
+					<img src="__PUBLIC__/Home/img/jiaru/jiaru_zc3.jpg" />
 					<h6>产品支持</h6>
 					<p>后台管理/功能优化</p>
 					<p>用户体验优化</p>
 				</li>
-				<li><img src="../img/jiaru/jiaru_zc4.jpg" />
+				<li><img src="__PUBLIC__/Home/img/jiaru/jiaru_zc4.jpg" />
 					<h6>市场支持</h6>
 					<p>会议营销</p>
 					<p>渠道拓展</p>
 					<p>客户推荐</p>
 				</li>
 				<li>
-					<img src="../img/jiaru/jiaru_zc5.jpg" />
+					<img src="__PUBLIC__/Home/img/jiaru/jiaru_zc5.jpg" />
 					<h6>培训支持</h6>
 					<p>文字教程</p>
 					<p>线下培训会</p>
 					<p>代理商交流会</p>
 				</li>
 				<li>
-					<img src="../img/jiaru/jiaru_zc6.jpg" />
+					<img src="__PUBLIC__/Home/img/jiaru/jiaru_zc6.jpg" />
 					<h6>团队建设</h6>
 					<p>销售客服</p>
 					<p>行政/运营</p>
-				</li>
+				</li> -->
 			</ul>
 		</article>
 		<article class="jia_ys">
@@ -171,16 +99,9 @@
 			<div class="underline"></div>
 			<div class="jia_ys_bj">
 				<div class="jia_ys_con">
-					<img src="../img/jiaru/jiaru_2.jpg" />
+					<img src="<{$listsss['picture']}>" />
 					<div class="jia_ys_conp">
-						<p>发展下级返利收入、广告收入</p>
-						<p>资源整合合作机会、异业合作机会</p>
-						<p>扶持创建行业/区域企业平台，成就个人事业</p>
-						<p>加盟代理商可获取所在地区的利润分成</p>
-						<p>极低的优惠价格赚取极具吸引力的销售差价</p>
-						<p>低门槛、以推广</p>
-						<p>40+行业模版让你承包本地90%的小程序市场</p>
-						<p>小白式后台操作系统</p>
+						<{$listsss['content']|html_entity_decode}>
 					</div>
 					<div style="clear: both;"></div>
 				</div>
@@ -189,13 +110,13 @@
 		<article class="jia_fb">
 			<h3 class="jiatit tit">中也小程序全国代理商分布</h3>
 			<div class="underline"></div>
-			<iframe src="../china/index.html" width="100%" style="overflow: hidden;height:60vw;transform: scale(1.2,1.2);"></iframe>
+			<iframe src="__PUBLIC__/Home/china/index.html" width="100%" style="overflow: hidden;height:60vw;transform: scale(1.2,1.2);"></iframe>
 		</article>
 		<article class="jia_lc">
 			<h3 class="jiatit tit">加盟代理流程</h3>
 			<div class="underline"></div>
 			<div class="jia_lc_con">
-				<img src="../img/jiaru/jiaru_lc.jpg" />
+				<img src="__PUBLIC__/Home/img/jiaru/jiaru_lc.jpg" />
 				<ul class="flex">
 					<li>提交表单</li>
 					<li>电话沟通代理意向</li>
@@ -209,27 +130,37 @@
 		<article class="lx_bj">
 			<h2 class=" tit">联系我们</h2>
 			<div class="lx flex">
-				<form action="#" method="post" class="userForm flex">
+				<form action="__MODULE__/Public/index" method="post" class="userForm flex">
 					<input type="text" placeholder="姓名" class="inp vw1_2" name="name" id="name" value="" />
-					<input type="tel" placeholder="手机" class="inp vw1_2" name="tel" id="tel" value="" />
+					<input type="tel" placeholder="手机" class="inp vw1_2" name="handset" id="tel" value="" />
 					<div class="telCode flex">
-						<input type="" class="vw1_2" name="" id="" value="" placeholder="验证码" />
+						<input type="" class="vw1_2" name="code" id="" value="" placeholder="验证码" />
 						<div class="vw1_2 color_con code">获取验证码</div>
 					</div>
 					<input type="email" placeholder="邮箱" id="email" class="email vw1_2" name="email" value="" />
-					<textarea name="yijian" placeholder="您的反馈"></textarea>
+					<textarea name="feedback" placeholder="您的反馈"></textarea>
 					<input type="submit" class="sub vw1_5" value="提交" />
 				</form>
 				<div class="lx_md ">
 					<h6>详细地址</h6>
-					<p>北京市昌平区超前路c区</p>
+					<p><{$listss.address}></p>
 					<h6>联系电话</h6>
-					<p>400-0130-696</p>
+					<p><{$listss.handset}></p>
 					<h6>邮箱</h6>
-					<p>13911811915@139.com</p>
+					<p><{$listss.email}></p>
 				</div>
 			</div>
 		</article>
+		
+		<script type="text/javascript">
+			$(".code").click(function(){
+				var ti=$("#tel").val();
+				// console.log(ti);
+				$.post("__MODULE__/Public/sms",{shouji:ti},function(result){
+					console.log(result);
+				});
+			})
+		</script>
 
 		<script defer type="text/javascript">
 			$(document).ready(function() {
@@ -311,85 +242,11 @@
 					}
 
 				})
-				$(".code").click(function() {
-					var ti = $("#tel").val();
-					// console.log(ti);
-					$.post("shouji/api_demo/SmsDemo.php", { shouji: ti }, function(result) {
-						console.log(result);
-					});
-				})
-
 			})
 		</script>
-		<footer>
-			<div class="foot flex">
-				<ul>
-					<li>
-						<a href="fa.html">解决方案</a>
-					</li>
-					<li>
-						<a href="fa.html">公众号相关服务</a>
-					</li>
-					<li>
-						<a href="fa.html">通用版开发</a>
-					</li>
-					<li>
-						<a href="fa.html">定制版开发</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a href="fa.html">服务</a>
-					</li>
-					<li>
-						<a href="fa.html">服务内容</a>
-					</li>
-					<li>
-						<a href="fa.html">服务流程</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a href="anli.html">案例展示</a>
-					</li>
-					<li>
-						<a href="anli.html">通用版案例展示</a>
-					</li>
-					<li>
-						<a href="anli.html">定制版案例展示</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a href="jiaru.html">招商加盟</a>
-					</li>
-					<li>
-						<a href="jiaru.html">加盟流程</a>
-					</li>
-					<li>
-						<a href="jiaru.html">加盟条件</a>
-					</li>
-					<li>
-						<a href="jiaru.html">联系方式</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a href="about.html">关于我们</a>
-					</li>
-					<li>
-						<a href="about.html">公司简介</a>
-					</li>
-					<li>
-						<a href="about.html">服务品质</a>
-					</li>
-					<li>
-						<a href="about.html">联系我们</a>
-					</li>
-				</ul>
-			</div>
-			<p class="vw1_2">版权所有©2011-2018&nbsp;中也科技有限公司&nbsp;版权归中也科技所有盗用必究<br />中也科技整体互联网+解决方案专家&nbsp;&nbsp;&nbsp;&nbsp;京ICP备18024938号</p>
-		</footer>
+		
+		<include file="Public/footer"/>
+		
 	</body>
 
 </html>

@@ -22,7 +22,7 @@
 			<a href="../index.html"><img src="../img/logo.png" /></a>
 			<ul class="zinav flex">
 				<li>
-					<a href="../index.html">&nbsp;&nbsp;首&nbsp;&nbsp;页&nbsp;&nbsp;</a>
+					<a href="../index.html">&nbsp;首&nbsp;页&nbsp;</a>
 				</li>
 				<li>
 					<a href="anli.html">成功案例</a>
@@ -138,6 +138,7 @@
 						<p>具备较强的市场分析、营销、推广能力和良好的人际沟通、协调能力，分析和解决问题的能力；</p>
 						<p>有较强的事业心，具备一定的领导能力。</p>
 					</div>
+					<div class="meng"></div>
 				</li>
 				<li><img src="../img/about/about_add2.png" />
 					<h6>市场营销</h6>
@@ -154,6 +155,7 @@
 						<p>2、有百度、公众号、广告等销售推广经验优先；</p>
 						<p>3、有很强的谈判能力、沟通能力、团队协作力以及学习能力。</p>
 					</div>
+					<div class="meng"></div>
 				</li>
 				<li><img src="../img/about/about_add3.png" />
 					<h6>营销策划</h6>
@@ -170,6 +172,7 @@
 						<p>2、有一年以上互联网行业相关从业经验（企划、营销等）；</p>
 						<p>3、热爱本职工作，良好团队协作能力。</p>
 					</div>
+					<div class="meng"></div>
 				</li>
 				<li><img src="../img/about/about_add4.png" />
 					<h6>新媒体运营</h6>
@@ -194,6 +197,7 @@
 						<p>7、具有较强的规划、分析能力和创新意识，敏感的对待产品和数据的运营，思维清晰而有条理；</p>
 						<p>8、具备良好的职业素质和敬业精神。</p>
 					</div>
+					<div class="meng"></div>
 				</li>
 				<li><img src="../img/about/about_add5.png" />
 					<h6>电话销售</h6>
@@ -212,8 +216,10 @@
 						<p>4、有相关电话客服，销售工作经验者优先。</p>
 						<p>5、服从公司安排与管理，优秀的毕业生放宽要求。</p>
 					</div>
+					<div class="meng"></div>
 				</li>
 			</ul>
+			
 			<h5 class="vw1_5">发送简历到邮箱13051353789@139.com<br />我们会主动联系您</h5>
 		</article>
 
@@ -300,13 +306,29 @@
 				})
 				$(".job_shou").click(function() {
 					var i = $(this).parent().index();
+					$(".about_need").eq(i).css("display","block");
+					$(".meng").eq(i).css("display","block");
 					$(".about_need").eq(i).css({ "opacity": "1", "transform": "scale(1,1)", "left": "12.5%" });
+					
+					$(".meng").eq(i).animate({"opacity":"1"},0);
+				})
+				$(".meng").click(function(){
+					var i = $(this).parent().index();
+					$(".about_need").eq(i).css({ "opacity": "0", "transform": "scale(0,0)", "left": aboutLeft[i] });
+					$(".meng").css("opacity","0");
+					setTimeout(function(){
+						$(".meng").css("display","none");
+					},800)
+					
 				})
 				var aboutLeft = new Array("-30%", "-5%", "12.5%", "30%", "50%");
 				$(".about_close").click(function() {
 					var i = $(this).parent().parent().index();
-					console.log(i);
 					$(".about_need").eq(i).css({ "opacity": "0", "transform": "scale(0,0)", "left": aboutLeft[i] });
+					$(".meng").css("opacity","0");
+					setTimeout(function(){
+						$(".meng").css("display","none");
+					},800)
 				})
 			})
 		</script>

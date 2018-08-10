@@ -1,0 +1,32 @@
+<include file="Public/header"/>
+		<!--以上为头部-->
+		<article class="zixun_header">
+			<img src="<{$list.picture}>" />
+		</article>
+		<article class="zixunListcon">
+			<h1><{$lists.name}></h1>
+			<p><{$lists.add|date="Y-m-d H:i",###}></p>
+			<img src="<{$lists.picture}>"/>
+			<{$lists.content|html_entity_decode}>
+			<div style="width:100%;display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:space-around;">
+			<div><p class="com" style="display:inline-block;">上一篇：</p>
+			<if condition="$last.id eq ''">
+			<p class="prev" style="display:inline-block;">没有了</p>
+			<else />
+			<p class="prev" style="display:inline-block;"><a href="zixunListcon.html?id=<{$last.id}>"><{$last.name}></a></p>
+			</if></div>
+			<div>
+			<p class="com" style="display:inline-block;">下一篇</p>
+			<if condition="$next.id eq ''">
+			<p class="next" style="display:inline-block;">没有了</p>
+			<else />
+			<p class="next" style="display:inline-block;"><a href="zixunListcon.html?id=<{$next.id}>"><{$next.name}></a></p>
+			</if>
+			</div>
+			</div>
+		</article>
+		
+		<include file="Public/footer"/>
+		
+	</body>
+</html>
